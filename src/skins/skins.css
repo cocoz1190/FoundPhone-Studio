@@ -4130,3 +4130,40 @@
 .catalog-slot[hidden] {
   display: none;
 }
+
+
+/* Contact list modeled on the supplied phonebook reference */
+.contacts-reference-list { background: #fff; }
+.contacts-reference-list > h1 { margin-bottom: 12px; }
+.contacts-reference-body { display: flex; align-items: stretch; min-height: 100%; padding-right: 13px; }
+.contacts-reference-rows { flex: 1; min-width: 0; }
+.contacts-reference-row {
+  display: flex; align-items: center; gap: 13px; width: 100%;
+  min-height: 80px; padding: 10px 14px; text-align: left;
+  border-bottom: 1px solid #e6e6e6; color: #111; background: #fff;
+}
+.contacts-reference-row .catalog-avatar {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: linear-gradient(145deg,#b9cbe9,#7189bd);
+  font-size: 23px; font-weight: 600; flex: 0 0 56px;
+}
+.contacts-reference-row > span:last-child { display:flex; flex-direction:column; gap:6px; min-width:0; }
+.contacts-reference-row strong { font-size: 16px; font-weight: 600; }
+.contacts-reference-row small { color:#999; font-size:13px; }
+.contacts-alpha {
+  display:flex; flex-direction:column; justify-content:space-around; align-items:center;
+  width:15px; flex:0 0 15px; padding:8px 0; color:#1685dc; font-size:10px;
+  line-height:1; position:sticky; top:0; align-self:flex-start; min-height:470px;
+}
+.phone-contact-list { background:#fff; }
+.phone-contact-row {
+  display:flex; align-items:center; gap:13px; width:100%; min-height:78px;
+  padding:10px 14px; text-align:left; border-bottom:1px solid #e6e6e6; color:#111;
+}
+.phone-contact-row .catalog-avatar {
+  width:54px; height:54px; border-radius:50%;
+  background:linear-gradient(145deg,#b9cbe9,#7189bd); font-size:22px;
+}
+.phone-contact-row span:last-child { display:flex; flex-direction:column; gap:5px; }
+.phone-contact-row strong { font-size:15px; font-weight:600; }
+.phone-contact-row small { color:#999; font-size:12px; }
