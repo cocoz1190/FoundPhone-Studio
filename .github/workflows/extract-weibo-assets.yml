@@ -68,7 +68,12 @@ jobs:
           mkdir -p public/wechat-assets
           cp "extracted/mzc-assets/新建文件夹/b31fbdc8057fc6c3d418e640b8d7bd76.jpg" public/wechat-assets/muzhicheng-avatar.jpg
           cp "extracted/mzc-assets/新建文件夹/ebc52d0aee1582c80cb1be77ac88a541.jpg" public/wechat-assets/zhuzhixin-avatar.jpg
-          cp "extracted/zj-assets/新建文件夹/72390f33e789d1670c1329d3e80c33ee.jpg" public/wechat-assets/zhangji-avatar.jpg
+          cp "extracted/zj-assets/新建文件夹/9dc258662a072351ccf26f49d565b3f6.jpg" public/wechat-assets/zhangji-avatar.jpg
+          mkdir -p public/wechat-assets/zuohang
+          cp "extracted/zh-assets/新建文件夹/0e9de1d7dee0e16b1c49f34d9f1d845f.jpg" public/wechat-assets/zuohang-avatar.jpg
+          cp "extracted/zh-assets/新建文件夹/12a9369437d3003a0c7404c2334b2054.jpg" public/wechat-assets/zuohang/food-01.jpg
+          cp "extracted/zh-assets/新建文件夹/1fa68f9a77caf4e415289f3f33611909.jpg" public/wechat-assets/zuohang/skewers.jpg
+          cp "extracted/zh-assets/新建文件夹/219bfa5d288a5357f0ef30ad5f0c9da8.jpg" public/wechat-assets/zuohang/cat.jpg
           mkdir -p public/wechat-assets/zhangji
           cp "extracted/zj-assets/新建文件夹/50fef9181e2353114f2d7a3c301eea3c.jpg" public/wechat-assets/zhangji/dog-01.jpg
           cp "extracted/zj-assets/新建文件夹/9dc258662a072351ccf26f49d565b3f6.jpg" public/wechat-assets/zhangji/dog-02.jpg
