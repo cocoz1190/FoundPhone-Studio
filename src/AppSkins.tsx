@@ -103,7 +103,7 @@ function MessageList({
             <div className="skin-date">{i.meta.dateLabel}</div>
           )}
           {i.kind === "event" ? (
-            <div className="skin-date">{i.body}</div>
+            <div className="skin-system-event">{i.body}</div>
           ) : (
             <div className={`skin-message ${i.outgoing ? "outgoing" : ""}`}>
               {!whatsapp && !i.outgoing && (
@@ -123,10 +123,12 @@ function MessageList({
                 ) : (
                   i.body
                 )}
-                <small className={whatsapp ? undefined : "wx-message-time"}>
-                  {i.time.slice(-5)}{" "}
-                  {whatsapp && i.outgoing && <CheckCheck size={11} />}
-                </small>
+                {whatsapp && (
+                  <small>
+                    {i.time.slice(-5)}{" "}
+                    {i.outgoing && <CheckCheck size={11} />}
+                  </small>
+                )}
               </button>
               {!whatsapp && i.outgoing && <Avatar name={i.sender} src={i.avatar} />}
             </div>
