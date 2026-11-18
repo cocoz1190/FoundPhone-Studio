@@ -751,6 +751,13 @@ svg {
     #b7bfa9
   );
 }
+.wallpaper-weeknd {
+  background-color: #08090d;
+  background-image: url("../be7745fd88858a8cf6afe1ed59e2b97b.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .wallpaper-orb {
   position: absolute;
   pointer-events: none;
