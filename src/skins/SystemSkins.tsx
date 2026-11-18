@@ -44,10 +44,11 @@ import {
 } from "./shared";
 const phonebookNames = ["张泽禹", "张极", "助理", "妈", "左航", "苏新皓"] as const;
 function onlyPhonebookContacts(items: Item[]) {
-  const order = new Map(phonebookNames.map((name, index) => [name, index]));
+  const order = (name: string) =>
+    phonebookNames.indexOf(name as (typeof phonebookNames)[number]);
   return items
-    .filter((item) => order.has(item.title))
-    .sort((a, b) => order.get(a.title)! - order.get(b.title)!);
+    .filter((item) => order(item.title) >= 0)
+    .sort((a, b) => order(a.title) - order(b.title));
 }
 export function PhoneSkin(p: Props) {
   const { tab, setTab, q, setQ, items } = useContent(p, "最近通话");
