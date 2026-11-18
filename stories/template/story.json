@@ -3,17 +3,28 @@
   "id": "ui-test-phone-v2",
   "title": "捡手机",
   "description": "仅用于界面测试，不含剧情",
-  "revision": 2,
+  "revision": 3,
   "phone": {
-    "owner": "机主",
-    "date": "2026-10-25",
-    "time": "09:41",
+    "owner": "朱志鑫",
+    "date": "2026-11-19",
+    "time": "01:35",
     "battery": 94,
     "network": "5G",
-    "wallpaper": "apple-wwdc26"
+    "wallpaper": "weeknd",
+    "theme": "light",
+    "passcode": "051119",
+    "notifications": true
   },
   "installedApps": [
-    "appstore",
+    {
+      "id": "appstore",
+      "name": "App Store",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
     {
       "id": "wechat",
       "name": "微信",
@@ -32,10 +43,42 @@
       "folder": "",
       "icon": ""
     },
-    "phone",
-    "messages",
-    "contacts",
-    "photos",
+    {
+      "id": "phone",
+      "name": "电话",
+      "installed": true,
+      "visible": true,
+      "dock": true,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "messages",
+      "name": "信息",
+      "installed": true,
+      "visible": true,
+      "dock": true,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "contacts",
+      "name": "通讯录",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "photos",
+      "name": "相册",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
     {
       "id": "camera",
       "name": "相机",
@@ -45,226 +88,1529 @@
       "folder": "",
       "icon": ""
     },
-    "safari",
-    "notes",
-    "calendar",
-    "mail",
-    "clock",
-    "reminders",
-    "files",
-    "music",
-    "maps",
-    "weather",
-    "wallet",
-    "health",
-    "find",
-    "calculator",
-    "settings",
-    "qq",
-    "weibo",
-    "redbook",
-    "bilibili",
-    "alipay",
-    "taobao",
-    "netease",
-    "delivery",
-    "forum",
-    "whatsapp",
-    "instagram",
-    "tiktok",
-    "twitter",
-    "telegram",
-    "discord",
-    "youtube",
-    "line",
-    "snapchat",
-    "facebook",
-    "messenger",
-    "reddit",
-    "spotify",
-    "netflix",
-    "pinterest",
-    "threads",
-    "kakao"
+    {
+      "id": "safari",
+      "name": "浏览器",
+      "installed": true,
+      "visible": true,
+      "dock": true,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "notes",
+      "name": "备忘录",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "calendar",
+      "name": "日历",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "mail",
+      "name": "邮件",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "clock",
+      "name": "时钟",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "reminders",
+      "name": "提醒事项",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "files",
+      "name": "文件",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "music",
+      "name": "音乐",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "maps",
+      "name": "地图",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "weather",
+      "name": "天气",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "wallet",
+      "name": "钱包",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "health",
+      "name": "健康",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "find",
+      "name": "查找",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "calculator",
+      "name": "计算器",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "settings",
+      "name": "设置",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "weibo",
+      "name": "微博",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "redbook",
+      "name": "小红书",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "taobao",
+      "name": "淘宝",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "netease",
+      "name": "网易云音乐",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "delivery",
+      "name": "美团外卖",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "instagram",
+      "name": "Instagram",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "tiktok",
+      "name": "TikTok",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "twitter",
+      "name": "X",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "spotify",
+      "name": "Spotify",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "netflix",
+      "name": "Netflix",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "pinterest",
+      "name": "Pinterest",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "qq",
+      "name": "QQ",
+      "installed": false,
+      "visible": false,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "bilibili",
+      "name": "哔哩哔哩",
+      "installed": false,
+      "visible": false,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "alipay",
+      "name": "支付宝",
+      "installed": false,
+      "visible": false,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "forum",
+      "name": "论坛",
+      "installed": false,
+      "visible": false,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "whatsapp",
+      "name": "WhatsApp",
+      "installed": false,
+      "visible": false,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "telegram",
+      "name": "Telegram",
+      "installed": false,
+      "visible": false,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "discord",
+      "name": "Discord",
+      "installed": false,
+      "visible": false,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "installed": false,
+      "visible": false,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "line",
+      "name": "LINE",
+      "installed": false,
+      "visible": false,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "snapchat",
+      "name": "Snapchat",
+      "installed": false,
+      "visible": false,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "facebook",
+      "name": "Facebook",
+      "installed": false,
+      "visible": false,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "messenger",
+      "name": "Messenger",
+      "installed": false,
+      "visible": false,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "reddit",
+      "name": "Reddit",
+      "installed": false,
+      "visible": false,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "kakao",
+      "name": "KakaoTalk",
+      "installed": false,
+      "visible": false,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "threads",
+      "name": "Threads",
+      "installed": false,
+      "visible": false,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    }
   ],
   "contacts": [
     {
-      "id": "test-contact",
-      "name": "测试联系人",
+      "id": "zhangji",
+      "name": "张极",
       "phone": "",
-      "bio": "这是一条测试内容。"
+      "avatar": "",
+      "bio": ""
+    },
+    {
+      "id": "zuohang",
+      "name": "左航",
+      "phone": "",
+      "avatar": "",
+      "bio": ""
+    },
+    {
+      "id": "zhangzeyu",
+      "name": "张泽禹",
+      "phone": "",
+      "avatar": "",
+      "bio": ""
+    },
+    {
+      "id": "suxinhao",
+      "name": "苏新皓",
+      "phone": "",
+      "avatar": "",
+      "bio": ""
+    },
+    {
+      "id": "mom",
+      "name": "妈",
+      "phone": "",
+      "avatar": "",
+      "bio": ""
+    },
+    {
+      "id": "assistant",
+      "name": "助理",
+      "phone": "",
+      "avatar": "",
+      "bio": ""
+    },
+    {
+      "id": "zhangjunhao",
+      "name": "张峻豪",
+      "phone": "",
+      "avatar": "",
+      "bio": ""
+    },
+    {
+      "id": "yuyuhan",
+      "name": "余宇涵",
+      "phone": "",
+      "avatar": "",
+      "bio": ""
+    },
+    {
+      "id": "muzhicheng",
+      "name": "穆祉丞",
+      "phone": "",
+      "avatar": "",
+      "bio": ""
+    },
+    {
+      "id": "zhangzimo",
+      "name": "张子墨",
+      "phone": "",
+      "avatar": "",
+      "bio": ""
+    },
+    {
+      "id": "huangshuo",
+      "name": "黄朔",
+      "phone": "",
+      "avatar": "",
+      "bio": ""
+    },
+    {
+      "id": "feige",
+      "name": "飞哥",
+      "phone": "",
+      "avatar": "",
+      "bio": ""
+    },
+    {
+      "id": "lifei",
+      "name": "李飞",
+      "phone": "",
+      "avatar": "",
+      "bio": ""
+    },
+    {
+      "id": "boss",
+      "name": "boss",
+      "phone": "",
+      "avatar": "",
+      "bio": ""
     }
   ],
   "chats": [
     {
-      "id": "test-chat-messages",
-      "app": "messages",
-      "title": "测试会话",
-      "participants": [
-        "owner",
-        "test-contact"
-      ],
-      "messages": [
-        {
-          "id": "test-message-messages",
-          "body": "这是一条测试消息。",
-          "senderId": "test-contact"
-        }
-      ]
-    },
-    {
-      "id": "test-chat-wechat",
+      "id": "wechat-zhangji",
       "app": "wechat",
-      "title": "测试会话",
+      "title": "张极",
       "participants": [
         "owner",
-        "test-contact"
+        "zhangji"
       ],
-      "messages": [
-        {
-          "id": "test-message-wechat",
-          "body": "这是一条测试消息。",
-          "senderId": "test-contact"
-        }
-      ]
+      "messages": []
     },
     {
-      "id": "test-chat-qq",
-      "app": "qq",
-      "title": "测试会话",
+      "id": "wechat-zuohang",
+      "app": "wechat",
+      "title": "左航",
       "participants": [
         "owner",
-        "test-contact"
+        "zuohang"
       ],
-      "messages": [
-        {
-          "id": "test-message-qq",
-          "body": "这是一条测试消息。",
-          "senderId": "test-contact"
-        }
-      ]
+      "messages": []
     },
     {
-      "id": "test-chat-whatsapp",
-      "app": "whatsapp",
-      "title": "测试会话",
+      "id": "wechat-zhangzeyu",
+      "app": "wechat",
+      "title": "张泽禹",
       "participants": [
         "owner",
-        "test-contact"
+        "zhangzeyu"
       ],
-      "messages": [
-        {
-          "id": "test-message-whatsapp",
-          "body": "这是一条测试消息。",
-          "senderId": "test-contact"
-        }
-      ]
+      "messages": []
     },
     {
-      "id": "test-chat-telegram",
-      "app": "telegram",
-      "title": "测试会话",
+      "id": "wechat-suxinhao",
+      "app": "wechat",
+      "title": "苏新皓",
       "participants": [
         "owner",
-        "test-contact"
+        "suxinhao"
       ],
-      "messages": [
-        {
-          "id": "test-message-telegram",
-          "body": "这是一条测试消息。",
-          "senderId": "test-contact"
-        }
-      ]
+      "messages": []
     },
     {
-      "id": "test-chat-discord",
-      "app": "discord",
-      "title": "测试会话",
+      "id": "wechat-mom",
+      "app": "wechat",
+      "title": "妈",
       "participants": [
         "owner",
-        "test-contact"
+        "mom"
       ],
-      "messages": [
-        {
-          "id": "test-message-discord",
-          "body": "这是一条测试消息。",
-          "senderId": "test-contact"
-        }
-      ]
+      "messages": []
     },
     {
-      "id": "test-chat-line",
-      "app": "line",
-      "title": "测试会话",
+      "id": "wechat-assistant",
+      "app": "wechat",
+      "title": "助理",
       "participants": [
         "owner",
-        "test-contact"
+        "assistant"
       ],
-      "messages": [
-        {
-          "id": "test-message-line",
-          "body": "这是一条测试消息。",
-          "senderId": "test-contact"
-        }
-      ]
+      "messages": []
     },
     {
-      "id": "test-chat-messenger",
-      "app": "messenger",
-      "title": "测试会话",
+      "id": "wechat-zhangjunhao",
+      "app": "wechat",
+      "title": "张峻豪",
       "participants": [
         "owner",
-        "test-contact"
+        "zhangjunhao"
       ],
-      "messages": [
-        {
-          "id": "test-message-messenger",
-          "body": "这是一条测试消息。",
-          "senderId": "test-contact"
-        }
-      ]
+      "messages": []
     },
     {
-      "id": "test-chat-kakao",
-      "app": "kakao",
-      "title": "测试会话",
+      "id": "wechat-yuyuhan",
+      "app": "wechat",
+      "title": "余宇涵",
       "participants": [
         "owner",
-        "test-contact"
+        "yuyuhan"
+      ],
+      "messages": []
+    },
+    {
+      "id": "wechat-muzhicheng",
+      "app": "wechat",
+      "title": "穆祉丞",
+      "participants": [
+        "owner",
+        "muzhicheng"
       ],
       "messages": [
         {
-          "id": "test-message-kakao",
-          "body": "这是一条测试消息。",
-          "senderId": "test-contact"
+          "id": "muzhicheng-restore-01",
+          "title": "穆祉丞",
+          "body": "回北京了？",
+          "richText": "",
+          "meta": {
+            "dateLabel": "2026年09月02日",
+            "conversationId": "wechat-muzhicheng",
+            "participants": "owner,muzhicheng"
+          },
+          "time": "2026-09-02 12:00",
+          "sender": "穆祉丞",
+          "avatar": "",
+          "kind": "text",
+          "media": "",
+          "hidden": false,
+          "unlock": "",
+          "password": "",
+          "folder": "",
+          "favorite": false,
+          "outgoing": false,
+          "read": true,
+          "likes": 0,
+          "comments": [],
+          "senderId": "muzhicheng"
         },
         {
-          "id": "test-reply-kakao",
-          "body": "这是一条测试回复。",
+          "id": "muzhicheng-restore-02",
+          "title": "穆祉丞",
+          "body": "对",
+          "richText": "",
+          "meta": {
+            "conversationId": "wechat-muzhicheng",
+            "participants": "owner,muzhicheng"
+          },
+          "time": "2026-09-02 12:02",
+          "sender": "朱志鑫",
+          "avatar": "",
+          "kind": "text",
+          "media": "",
+          "hidden": false,
+          "unlock": "",
+          "password": "",
+          "folder": "",
+          "favorite": false,
+          "outgoing": true,
+          "read": true,
+          "likes": 0,
+          "comments": [],
+          "senderId": "owner"
+        },
+        {
+          "id": "muzhicheng-restore-03",
+          "title": "穆祉丞",
+          "body": "刚到",
+          "richText": "",
+          "meta": {
+            "conversationId": "wechat-muzhicheng",
+            "participants": "owner,muzhicheng"
+          },
+          "time": "2026-09-02 12:03",
+          "sender": "朱志鑫",
+          "avatar": "",
+          "kind": "text",
+          "media": "",
+          "hidden": false,
+          "unlock": "",
+          "password": "",
+          "folder": "",
+          "favorite": false,
+          "outgoing": true,
+          "read": true,
+          "likes": 0,
+          "comments": [],
+          "senderId": "owner"
+        },
+        {
+          "id": "muzhicheng-restore-04",
+          "title": "穆祉丞",
+          "body": "好👌",
+          "richText": "",
+          "meta": {
+            "conversationId": "wechat-muzhicheng",
+            "participants": "owner,muzhicheng"
+          },
+          "time": "2026-09-02 12:08",
+          "sender": "穆祉丞",
+          "avatar": "",
+          "kind": "text",
+          "media": "",
+          "hidden": false,
+          "unlock": "",
+          "password": "",
+          "folder": "",
+          "favorite": false,
+          "outgoing": false,
+          "read": true,
+          "likes": 0,
+          "comments": [],
+          "senderId": "muzhicheng"
+        },
+        {
+          "id": "muzhicheng-restore-05",
+          "title": "穆祉丞",
+          "body": "过几天约起来",
+          "richText": "",
+          "meta": {
+            "conversationId": "wechat-muzhicheng",
+            "participants": "owner,muzhicheng"
+          },
+          "time": "2026-09-02 12:09",
+          "sender": "穆祉丞",
+          "avatar": "",
+          "kind": "text",
+          "media": "",
+          "hidden": false,
+          "unlock": "",
+          "password": "",
+          "folder": "",
+          "favorite": false,
+          "outgoing": false,
+          "read": true,
+          "likes": 0,
+          "comments": [],
+          "senderId": "muzhicheng"
+        },
+        {
+          "id": "muzhicheng-restore-06",
+          "title": "穆祉丞",
+          "body": "嗯",
+          "richText": "",
+          "meta": {
+            "conversationId": "wechat-muzhicheng",
+            "participants": "owner,muzhicheng"
+          },
+          "time": "2026-09-02 12:10",
+          "sender": "朱志鑫",
+          "avatar": "",
+          "kind": "text",
+          "media": "",
+          "hidden": false,
+          "unlock": "",
+          "password": "",
+          "folder": "",
+          "favorite": false,
+          "outgoing": true,
+          "read": true,
+          "likes": 0,
+          "comments": [],
+          "senderId": "owner"
+        },
+        {
+          "id": "muzhicheng-restore-07",
+          "title": "穆祉丞",
+          "body": "到时候再说",
+          "richText": "",
+          "meta": {
+            "conversationId": "wechat-muzhicheng",
+            "participants": "owner,muzhicheng"
+          },
+          "time": "2026-09-02 12:11",
+          "sender": "朱志鑫",
+          "avatar": "",
+          "kind": "text",
+          "media": "",
+          "hidden": false,
+          "unlock": "",
+          "password": "",
+          "folder": "",
+          "favorite": false,
+          "outgoing": true,
+          "read": true,
+          "likes": 0,
+          "comments": [],
+          "senderId": "owner"
+        },
+        {
+          "id": "muzhicheng-restore-08",
+          "title": "穆祉丞",
+          "body": "生日快乐 恩仔",
+          "richText": "",
+          "meta": {
+            "dateLabel": "2026年11月16日",
+            "conversationId": "wechat-muzhicheng",
+            "participants": "owner,muzhicheng"
+          },
+          "time": "2026-11-16 12:00",
+          "sender": "朱志鑫",
+          "avatar": "",
+          "kind": "text",
+          "media": "",
+          "hidden": false,
+          "unlock": "",
+          "password": "",
+          "folder": "",
+          "favorite": false,
+          "outgoing": true,
+          "read": true,
+          "likes": 0,
+          "comments": [],
+          "senderId": "owner"
+        },
+        {
+          "id": "muzhicheng-restore-09",
+          "title": "穆祉丞",
+          "body": "谢谢22x",
+          "richText": "",
+          "meta": {
+            "conversationId": "wechat-muzhicheng",
+            "participants": "owner,muzhicheng"
+          },
+          "time": "2026-11-16 12:01",
+          "sender": "穆祉丞",
+          "avatar": "",
+          "kind": "text",
+          "media": "",
+          "hidden": false,
+          "unlock": "",
+          "password": "",
+          "folder": "",
+          "favorite": false,
+          "outgoing": false,
+          "read": true,
+          "likes": 0,
+          "comments": [],
+          "senderId": "muzhicheng"
+        },
+        {
+          "id": "muzhicheng-restore-10",
+          "title": "穆祉丞",
+          "body": "过几天也是你生日了",
+          "richText": "",
+          "meta": {
+            "conversationId": "wechat-muzhicheng",
+            "participants": "owner,muzhicheng"
+          },
+          "time": "2026-11-16 12:02",
+          "sender": "穆祉丞",
+          "avatar": "",
+          "kind": "text",
+          "media": "",
+          "hidden": false,
+          "unlock": "",
+          "password": "",
+          "folder": "",
+          "favorite": false,
+          "outgoing": false,
+          "read": true,
+          "likes": 0,
+          "comments": [],
+          "senderId": "muzhicheng"
+        },
+        {
+          "id": "muzhicheng-restore-11",
+          "title": "穆祉丞",
+          "body": "提前祝你生日快乐✊",
+          "richText": "",
+          "meta": {
+            "conversationId": "wechat-muzhicheng",
+            "participants": "owner,muzhicheng"
+          },
+          "time": "2026-11-16 12:03",
+          "sender": "穆祉丞",
+          "avatar": "",
+          "kind": "text",
+          "media": "",
+          "hidden": false,
+          "unlock": "",
+          "password": "",
+          "folder": "",
+          "favorite": false,
+          "outgoing": false,
+          "read": true,
+          "likes": 0,
+          "comments": [],
+          "senderId": "muzhicheng"
+        },
+        {
+          "id": "muzhicheng-restore-12",
+          "title": "穆祉丞",
+          "body": "哈哈",
+          "richText": "",
+          "meta": {
+            "conversationId": "wechat-muzhicheng",
+            "participants": "owner,muzhicheng"
+          },
+          "time": "2026-11-16 12:04",
+          "sender": "朱志鑫",
+          "avatar": "",
+          "kind": "text",
+          "media": "",
+          "hidden": false,
+          "unlock": "",
+          "password": "",
+          "folder": "",
+          "favorite": false,
+          "outgoing": true,
+          "read": true,
+          "likes": 0,
+          "comments": [],
+          "senderId": "owner"
+        },
+        {
+          "id": "muzhicheng-restore-13",
+          "title": "穆祉丞",
+          "body": "谢谢哈",
+          "richText": "",
+          "meta": {
+            "conversationId": "wechat-muzhicheng",
+            "participants": "owner,muzhicheng"
+          },
+          "time": "2026-11-16 12:05",
+          "sender": "朱志鑫",
+          "avatar": "",
+          "kind": "text",
+          "media": "",
+          "hidden": false,
+          "unlock": "",
+          "password": "",
+          "folder": "",
+          "favorite": false,
+          "outgoing": true,
+          "read": true,
+          "likes": 0,
+          "comments": [],
+          "senderId": "owner"
+        },
+        {
+          "id": "muzhicheng-restore-14",
+          "title": "穆祉丞",
+          "body": "穆祉丞领取了你的红包",
+          "richText": "",
+          "meta": {
+            "systemMessage": "true",
+            "conversationId": "wechat-muzhicheng",
+            "participants": "owner,muzhicheng"
+          },
+          "time": "2026-11-16 12:06",
+          "sender": "系统",
+          "avatar": "",
+          "kind": "event",
+          "media": "",
+          "hidden": false,
+          "unlock": "",
+          "password": "",
+          "folder": "",
+          "favorite": false,
+          "outgoing": false,
+          "read": true,
+          "likes": 0,          "comments": []
+        },
+        {
+          "id": "muzhicheng-restore-15",
+          "title": "穆祉丞",
+          "body": "兄弟 生日快乐🙂",
+          "richText": "",
+          "meta": {
+            "dateLabel": "2026年11月19日 00:00",
+            "conversationId": "wechat-muzhicheng",
+            "participants": "owner,muzhicheng"
+          },
+          "time": "2026-11-19 00:00",
+          "sender": "穆祉丞",
+          "avatar": "",
+          "kind": "text",
+          "media": "",
+          "hidden": false,
+          "unlock": "",
+          "password": "",
+          "folder": "",
+          "favorite": false,
+          "outgoing": false,
+          "read": true,
+          "likes": 0,
+          "comments": [],
+          "senderId": "muzhicheng"
+        },
+        {
+          "id": "muzhicheng-restore-16",
+          "title": "穆祉丞",
+          "body": "还专门卡着点",
+          "richText": "",
+          "meta": {
+            "conversationId": "wechat-muzhicheng",
+            "participants": "owner,muzhicheng"
+          },
+          "time": "2026-11-19 00:01",
+          "sender": "朱志鑫",
+          "avatar": "",
+          "kind": "text",
+          "media": "",
+          "hidden": false,
+          "unlock": "",
+          "password": "",
+          "folder": "",
+          "favorite": false,
+          "outgoing": true,
+          "read": true,
+          "likes": 0,
+          "comments": [],
+          "senderId": "owner"
+        },
+        {
+          "id": "muzhicheng-restore-17",
+          "title": "穆祉丞",
+          "body": "谢谢👌",
+          "richText": "",
+          "meta": {
+            "conversationId": "wechat-muzhicheng",
+            "participants": "owner,muzhicheng"
+          },
+          "time": "2026-11-19 00:02",
+          "sender": "朱志鑫",
+          "avatar": "",
+          "kind": "text",
+          "media": "",
+          "hidden": false,
+          "unlock": "",
+          "password": "",
+          "folder": "",
+          "favorite": false,
+          "outgoing": true,
+          "read": true,
+          "likes": 0,
+          "comments": [],
+          "senderId": "owner"
+        },
+        {
+          "id": "muzhicheng-restore-18",
+          "title": "穆祉丞",
+          "body": "过几天滑雪 一路要不",
+          "richText": "",
+          "meta": {
+            "conversationId": "wechat-muzhicheng",
+            "participants": "owner,muzhicheng"
+          },
+          "time": "2026-11-19 00:03",
+          "sender": "穆祉丞",
+          "avatar": "",
+          "kind": "text",
+          "media": "",
+          "hidden": false,
+          "unlock": "",
+          "password": "",
+          "folder": "",
+          "favorite": false,
+          "outgoing": false,
+          "read": true,
+          "likes": 0,
+          "comments": [],
+          "senderId": "muzhicheng"
+        },
+        {
+          "id": "muzhicheng-restore-19",
+          "title": "穆祉丞",
+          "body": "可以",
+          "richText": "",
+          "meta": {
+            "conversationId": "wechat-muzhicheng",
+            "participants": "owner,muzhicheng"
+          },
+          "time": "2026-11-19 00:04",
+          "sender": "朱志鑫",
+          "avatar": "",
+          "kind": "text",
+          "media": "",
+          "hidden": false,
+          "unlock": "",
+          "password": "",
+          "folder": "",
+          "favorite": false,
+          "outgoing": true,
+          "read": true,
+          "likes": 0,
+          "comments": [],
+          "senderId": "owner"
+        },
+        {
+          "id": "muzhicheng-restore-20",
+          "title": "穆祉丞",
+          "body": "好久没去了",
+          "richText": "",
+          "meta": {
+            "conversationId": "wechat-muzhicheng",
+            "participants": "owner,muzhicheng"
+          },
+          "time": "2026-11-19 00:05",
+          "sender": "朱志鑫",
+          "avatar": "",
+          "kind": "text",
+          "media": "",
+          "hidden": false,
+          "unlock": "",
+          "password": "",
+          "folder": "",
+          "favorite": false,
+          "outgoing": true,
+          "read": true,
+          "likes": 0,
+          "comments": [],
+          "senderId": "owner"
+        },
+        {
+          "id": "muzhicheng-restore-21",
+          "title": "穆祉丞",
+          "body": "要得撒",
+          "richText": "",
+          "meta": {
+            "conversationId": "wechat-muzhicheng",
+            "participants": "owner,muzhicheng"
+          },
+          "time": "2026-11-19 00:06",
+          "sender": "穆祉丞",
+          "avatar": "",
+          "kind": "text",
+          "media": "",
+          "hidden": false,
+          "unlock": "",
+          "password": "",
+          "folder": "",
+          "favorite": false,
+          "outgoing": false,
+          "read": true,
+          "likes": 0,
+          "comments": [],
+          "senderId": "muzhicheng"
+        },
+        {
+          "id": "muzhicheng-restore-22",
+          "title": "穆祉丞",
+          "body": "到时候说一声哈",
+          "richText": "",
+          "meta": {
+            "conversationId": "wechat-muzhicheng",
+            "participants": "owner,muzhicheng"
+          },
+          "time": "2026-11-19 00:07",
+          "sender": "穆祉丞",
+          "avatar": "",
+          "kind": "text",
+          "media": "",
+          "hidden": false,
+          "unlock": "",
+          "password": "",
+          "folder": "",
+          "favorite": false,
+          "outgoing": false,
+          "read": true,
+          "likes": 0,
+          "comments": [],
+          "senderId": "muzhicheng"
+        },
+        {
+          "id": "muzhicheng-restore-23",
+          "title": "穆祉丞",
+          "body": "好",
+          "richText": "",
+          "meta": {
+            "conversationId": "wechat-muzhicheng",
+            "participants": "owner,muzhicheng"
+          },
+          "time": "2026-11-19 00:08",
+          "sender": "朱志鑫",
+          "avatar": "",
+          "kind": "text",
+          "media": "",
+          "hidden": false,
+          "unlock": "",
+          "password": "",
+          "folder": "",
+          "favorite": false,
+          "outgoing": true,
+          "read": true,
+          "likes": 0,
+          "comments": [],
           "senderId": "owner"
         }
       ]
+    },
+    {
+      "id": "wechat-zhangzimo",
+      "app": "wechat",
+      "title": "张子墨",
+      "participants": [
+        "owner",
+        "zhangzimo"
+      ],
+      "messages": []
+    },
+    {
+      "id": "wechat-huangshuo",
+      "app": "wechat",
+      "title": "黄朔",
+      "participants": [
+        "owner",
+        "huangshuo"
+      ],
+      "messages": []
+    },
+    {
+      "id": "wechat-feige",
+      "app": "wechat",
+      "title": "飞哥",
+      "participants": [
+        "owner",
+        "feige"
+      ],
+      "messages": []
+    },
+    {
+      "id": "wechat-lifei",
+      "app": "wechat",
+      "title": "李飞",
+      "participants": [
+        "owner",
+        "lifei"
+      ],
+      "messages": []
+    },
+    {
+      "id": "wechat-group-top",
+      "app": "wechat",
+      "title": "top",
+      "participants": [
+        "owner",
+        "zhangji",
+        "zuohang",
+        "zhangzeyu",
+        "suxinhao",
+        "boss"
+      ],
+      "messages": []
+    },
+    {
+      "id": "wechat-group-eagle",
+      "app": "wechat",
+      "title": "eagle",
+      "participants": [
+        "owner",
+        "zhangji",
+        "zuohang",
+        "zhangzeyu",
+        "suxinhao"
+      ],
+      "messages": []
     }
   ],
   "content": {
     "phone": [
       {
-        "id": "test-item-phone",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "contacts": [
+        "id": "call-001",
+        "title": "张极",
+        "body": "呼出 · 00:12:36",
+        "richText": "",
+        "meta": {
+          "number": "",
+          "status": "呼出",
+          "callCount": "4"
+        },
+        "time": "2026-09-14 21:18",
+        "sender": "张极",
+        "avatar": "",
+        "kind": "call",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
       {
-        "id": "test-item-contacts",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
+        "id": "call-002",
+        "title": "妈",
+        "body": "呼入 · 00:04:52",
+        "richText": "",
+        "meta": {
+          "number": "",
+          "status": "呼入",
+          "callCount": "2"
+        },
+        "time": "2026-09-22 08:06",
+        "sender": "妈",
+        "avatar": "",
+        "kind": "call",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "call-003",
+        "title": "助理",
+        "body": "呼入 · 00:02:18",
+        "richText": "",
+        "meta": {
+          "number": "",
+          "status": "呼入",
+          "callCount": "3"
+        },
+        "time": "2026-10-03 15:42",
+        "sender": "助理",
+        "avatar": "",
+        "kind": "call",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "call-004",
+        "title": "张极",
+        "body": "未接来电",
+        "richText": "",
+        "meta": {
+          "number": "",
+          "status": "未接",
+          "callCount": "4"
+        },
+        "time": "2026-10-11 23:07",
+        "sender": "张极",
+        "avatar": "",
+        "kind": "call",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "call-005",
+        "title": "妈",
+        "body": "呼出 · 00:06:11",
+        "richText": "",
+        "meta": {
+          "number": "",
+          "status": "呼出",
+          "callCount": "2"
+        },
+        "time": "2026-10-19 19:26",
+        "sender": "妈",
+        "avatar": "",
+        "kind": "call",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "call-006",
+        "title": "助理",
+        "body": "呼出 · 00:01:43",
+        "richText": "",
+        "meta": {
+          "number": "",
+          "status": "呼出",
+          "callCount": "3"
+        },
+        "time": "2026-11-05 10:15",
+        "sender": "助理",
+        "avatar": "",
+        "kind": "call",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "call-007",
+        "title": "张极",
+        "body": "呼入 · 00:08:09",
+        "richText": "",
+        "meta": {
+          "number": "",
+          "status": "呼入",
+          "callCount": "4"
+        },
+        "time": "2026-11-12 22:34",
+        "sender": "张极",
+        "avatar": "",
+        "kind": "call",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "call-008",
+        "title": "快递外卖",
+        "body": "呼入 · 00:00:46",
+        "richText": "",
+        "meta": {
+          "number": "",
+          "status": "呼入",
+          "callCount": "1"
+        },
+        "time": "2026-11-18 13:27",
+        "sender": "快递外卖",
+        "avatar": "",
+        "kind": "call",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "zhangji-phone-card",
+        "title": "张极",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "phone": "138****5621"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "张极",
+        "avatar": "",
         "kind": "text",
-        "meta": {}
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "zuohang-phone-card",
+        "title": "左航",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "phone": "186****3074"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "左航",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "zhangzeyu-phone-card",
+        "title": "张泽禹",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "phone": "159****8246"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "张泽禹",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "suxinhao-phone-card",
+        "title": "苏新皓",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "phone": "177****4913"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "苏新皓",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "mom-phone-card",
+        "title": "妈",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "phone": "135****7608"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "妈",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
       }
     ],
     "photos": [
@@ -272,9 +1618,22 @@
         "id": "test-item-photos",
         "title": "测试内容",
         "body": "这是一条测试内容。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-19 01:35",
         "sender": "测试用户",
+        "avatar": "",
         "kind": "text",
-        "meta": {}
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
       }
     ],
     "camera": [
@@ -282,9 +1641,22 @@
         "id": "test-item-camera",
         "title": "测试内容",
         "body": "这是一条测试内容。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-19 01:35",
         "sender": "测试用户",
+        "avatar": "",
         "kind": "text",
-        "meta": {}
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
       }
     ],
     "safari": [
@@ -292,9 +1664,22 @@
         "id": "test-item-safari",
         "title": "测试内容",
         "body": "这是一条测试内容。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-19 01:35",
         "sender": "测试用户",
+        "avatar": "",
         "kind": "text",
-        "meta": {}
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
       }
     ],
     "notes": [
@@ -302,9 +1687,22 @@
         "id": "test-item-notes",
         "title": "测试内容",
         "body": "这是一条测试内容。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-19 01:35",
         "sender": "测试用户",
+        "avatar": "",
         "kind": "text",
-        "meta": {}
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
       }
     ],
     "calendar": [
@@ -312,9 +1710,22 @@
         "id": "test-item-calendar",
         "title": "测试内容",
         "body": "这是一条测试内容。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-19 01:35",
         "sender": "测试用户",
+        "avatar": "",
         "kind": "text",
-        "meta": {}
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
       }
     ],
     "mail": [
@@ -322,9 +1733,22 @@
         "id": "test-item-mail",
         "title": "测试内容",
         "body": "这是一条测试内容。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-19 01:35",
         "sender": "测试用户",
+        "avatar": "",
         "kind": "text",
-        "meta": {}
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
       }
     ],
     "clock": [
@@ -332,9 +1756,22 @@
         "id": "test-item-clock",
         "title": "测试内容",
         "body": "这是一条测试内容。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-19 01:35",
         "sender": "测试用户",
+        "avatar": "",
         "kind": "text",
-        "meta": {}
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
       }
     ],
     "reminders": [
@@ -342,9 +1779,22 @@
         "id": "test-item-reminders",
         "title": "测试内容",
         "body": "这是一条测试内容。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-19 01:35",
         "sender": "测试用户",
+        "avatar": "",
         "kind": "text",
-        "meta": {}
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
       }
     ],
     "files": [
@@ -352,9 +1802,22 @@
         "id": "test-item-files",
         "title": "测试内容",
         "body": "这是一条测试内容。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-19 01:35",
         "sender": "测试用户",
+        "avatar": "",
         "kind": "text",
-        "meta": {}
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
       }
     ],
     "music": [
@@ -362,9 +1825,22 @@
         "id": "test-item-music",
         "title": "测试内容",
         "body": "这是一条测试内容。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-19 01:35",
         "sender": "测试用户",
+        "avatar": "",
         "kind": "text",
-        "meta": {}
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
       }
     ],
     "maps": [
@@ -372,9 +1848,22 @@
         "id": "test-item-maps",
         "title": "测试内容",
         "body": "这是一条测试内容。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-19 01:35",
         "sender": "测试用户",
+        "avatar": "",
         "kind": "text",
-        "meta": {}
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
       }
     ],
     "weather": [
@@ -382,9 +1871,22 @@
         "id": "test-item-weather",
         "title": "测试内容",
         "body": "这是一条测试内容。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-19 01:35",
         "sender": "测试用户",
+        "avatar": "",
         "kind": "text",
-        "meta": {}
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
       }
     ],
     "wallet": [
@@ -392,9 +1894,22 @@
         "id": "test-item-wallet",
         "title": "测试内容",
         "body": "这是一条测试内容。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-19 01:35",
         "sender": "测试用户",
+        "avatar": "",
         "kind": "text",
-        "meta": {}
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
       }
     ],
     "health": [
@@ -402,9 +1917,22 @@
         "id": "test-item-health",
         "title": "测试内容",
         "body": "这是一条测试内容。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-19 01:35",
         "sender": "测试用户",
+        "avatar": "",
         "kind": "text",
-        "meta": {}
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
       }
     ],
     "find": [
@@ -412,9 +1940,22 @@
         "id": "test-item-find",
         "title": "测试内容",
         "body": "这是一条测试内容。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-19 01:35",
         "sender": "测试用户",
+        "avatar": "",
         "kind": "text",
-        "meta": {}
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
       }
     ],
     "calculator": [
@@ -422,9 +1963,22 @@
         "id": "test-item-calculator",
         "title": "测试内容",
         "body": "这是一条测试内容。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-19 01:35",
         "sender": "测试用户",
+        "avatar": "",
         "kind": "text",
-        "meta": {}
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
       }
     ],
     "settings": [
@@ -432,19 +1986,71 @@
         "id": "test-item-settings",
         "title": "测试内容",
         "body": "这是一条测试内容。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-19 01:35",
         "sender": "测试用户",
+        "avatar": "",
         "kind": "text",
-        "meta": {}
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
       }
     ],
     "weibo": [
       {
-        "id": "test-item-weibo",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
+        "id": "weibo-profile-avatar",
+        "title": "微博头像",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "profileAsset": "weibo-avatar"
+        },
+        "time": "2026-11-10 12:00",
+        "sender": "TOP登陆少年-朱志鑫",
+        "avatar": "",
         "kind": "text",
-        "meta": {}
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "资料",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "weibo-pinned-barb",
+        "title": "《倒刺》",
+        "body": "不要让烦恼如同倒刺，小但挠心，轻轻触碰一下，也会疼痛不止。\n\n《倒刺》\nWhatever Day\n——————\n#22X日志#\n\n这次“出门”，比较情绪化，也比较临时。\n\n11月的海边其实很冷了，当时我一直就在想一个事，我们到底追求的是什么呢？\n\n想了很久，暂时还没有得出一个具体的答案。\n\n但是我只知道我还需要继续往前走——",
+        "richText": "",
+        "meta": {
+          "pinned": "true",
+          "handle": "24-11-19",
+          "gallery": "wb1"
+        },
+        "time": "2024-11-19 12:00",
+        "sender": "TOP登陆少年-朱志鑫",
+        "avatar": "",
+        "kind": "post",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "微博",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 2475,
+        "comments": []
       }
     ],
     "redbook": [
@@ -452,9 +2058,22 @@
         "id": "test-item-redbook",
         "title": "测试内容",
         "body": "这是一条测试内容。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-19 01:35",
         "sender": "测试用户",
+        "avatar": "",
         "kind": "text",
-        "meta": {}
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
       }
     ],
     "douyin": [
@@ -462,29 +2081,22 @@
         "id": "test-item-douyin",
         "title": "测试内容",
         "body": "这是一条测试内容。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-19 01:35",
         "sender": "测试用户",
+        "avatar": "",
         "kind": "text",
-        "meta": {}
-      }
-    ],
-    "bilibili": [
-      {
-        "id": "test-item-bilibili",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "alipay": [
-      {
-        "id": "test-item-alipay",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
       }
     ],
     "taobao": [
@@ -492,19 +2104,1058 @@
         "id": "test-item-taobao",
         "title": "测试内容",
         "body": "这是一条测试内容。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-19 01:35",
         "sender": "测试用户",
+        "avatar": "",
         "kind": "text",
-        "meta": {}
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
       }
     ],
     "netease": [
       {
-        "id": "test-item-netease",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
+        "id": "netease-track-01",
+        "title": "CRUSH (with ASTN & Bren Joy)",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "sunkis, ASTN, Bren Joy",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-track-02",
+        "title": "summer",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "keshi",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-track-03",
+        "title": "beside you",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "keshi",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-track-04",
+        "title": "Leave Em Alone",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "Quality Control, Layton Greene",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-track-05",
+        "title": "2 soon",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "keshi",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-track-06",
+        "title": "颜色",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "Gareth.T",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-track-07",
+        "title": "Summer Too Hot",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "Chris Brown",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-track-08",
+        "title": "JUST DO YOU",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "ØZI, sunkis",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-track-09",
+        "title": "Toosie Slide",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "Drake",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-track-10",
+        "title": "阴天",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "莫文蔚",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-track-11",
+        "title": "玻璃",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "Gareth.T",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-track-12",
+        "title": "颜如玉",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "李大奔 BENZO",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-track-13",
+        "title": "左转灯 (1000 Times +1)",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "派伟俊 / mac ova seas",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-track-14",
+        "title": "i'm so tired... (Stripped - Live)",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "Lauv / Troye Sivan",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-track-15",
+        "title": "暴风雨",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "Higher Brothers / HARIKIRI",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-track-16",
+        "title": "在雨后醒来",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "艾志恒 Asen",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-track-17",
+        "title": "fake smile",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "Ariana Grande",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-track-18",
+        "title": "95.south",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "J. Cole",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-track-19",
+        "title": "Jeremy Scott Freestyle",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "GALI",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-track-20",
+        "title": "100",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "TizzyT",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-track-21",
+        "title": "Prospect",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "MAYHEM Beats",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-track-22",
+        "title": "Tokyo Drift (东京漂移)",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "Teriyaki Boyz",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-track-23",
+        "title": "Wake Up in the Sky",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "Gucci Mane / Bruno Mars / Kodak Black",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-track-24",
+        "title": "Stuff",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "Lil Baby / Travis Scott",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-track-25",
+        "title": "NOKIA",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "Drake",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-track-26",
+        "title": "Timeless",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "The Weeknd / Playboi Carti",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-track-27",
+        "title": "Money On Money (feat. Future)",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "Young Thug / Future",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-track-28",
+        "title": "tv off",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "Kendrick Lamar / Gunplay",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-track-29",
+        "title": "Legends",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "Quavo / Lil Baby",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-track-30",
+        "title": "Blue Devil",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "Key Glock",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-track-31",
+        "title": "Cheap Shot",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "Ella Mai",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-track-32",
+        "title": "HOWLING",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "我的歌单"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "XG",
+        "avatar": "",
+        "kind": "audio",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-pdf-1",
+        "title": "Saturn",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "PDF 歌单截图"
+        },
+        "time": "2026-11-10 12:00",
+        "sender": "SZA",
+        "avatar": "",
         "kind": "text",
-        "meta": {}
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-pdf-2",
+        "title": "杀死比尔",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "PDF 歌单截图"
+        },
+        "time": "2026-11-10 12:00",
+        "sender": "李文杰",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-pdf-3",
+        "title": "30 For 30",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "PDF 歌单截图"
+        },
+        "time": "2026-11-10 12:00",
+        "sender": "SZA, Kendrick Lamar",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-pdf-5",
+        "title": "天上有",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "PDF 歌单截图"
+        },
+        "time": "2026-11-10 12:00",
+        "sender": "李佳隆, Capper",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-pdf-9",
+        "title": "赶路的蝴蝶",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "PDF 歌单截图"
+        },
+        "time": "2026-11-10 12:00",
+        "sender": "未标注",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-pdf-21",
+        "title": "What It Is (Block Boy)",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "PDF 歌单截图"
+        },
+        "time": "2026-11-10 12:00",
+        "sender": "Doechii, Kodak Black",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []      },
+      {
+        "id": "netease-pdf-22",
+        "title": "GBP",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "PDF 歌单截图"
+        },
+        "time": "2026-11-10 12:00",
+        "sender": "Central Cee, 21 Savage",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-pdf-23",
+        "title": "Chrome Heart Freestyle",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "PDF 歌单截图"
+        },
+        "time": "2026-11-10 12:00",
+        "sender": "GALI",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-pdf-24",
+        "title": "Passionfruit",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "PDF 歌单截图"
+        },
+        "time": "2026-11-10 12:00",
+        "sender": "Drake",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-pdf-25",
+        "title": "Sticky",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "PDF 歌单截图"
+        },
+        "time": "2026-11-10 12:00",
+        "sender": "Drake",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-pdf-26",
+        "title": "Change",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "PDF 歌单截图"
+        },
+        "time": "2026-11-10 12:00",
+        "sender": "J. Cole",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-pdf-27",
+        "title": "Summer Too Hot (Explicit)",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "PDF 歌单截图"
+        },
+        "time": "2026-11-10 12:00",
+        "sender": "Chris Brown",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "netease-pdf-28",
+        "title": "在雨后醒来 (Explicit)",
+        "body": "",
+        "richText": "",
+        "meta": {
+          "album": "PDF 歌单截图"
+        },
+        "time": "2026-11-10 12:00",
+        "sender": "艾志恒 Asen",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "朱",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
       }
     ],
     "delivery": [
@@ -512,19 +3163,22 @@
         "id": "test-item-delivery",
         "title": "测试内容",
         "body": "这是一条测试内容。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-19 01:35",
         "sender": "测试用户",
+        "avatar": "",
         "kind": "text",
-        "meta": {}
-      }
-    ],
-    "forum": [
-      {
-        "id": "test-item-forum",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
       }
     ],
     "instagram": [
@@ -532,9 +3186,22 @@
         "id": "test-item-instagram",
         "title": "测试内容",
         "body": "这是一条测试内容。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-19 01:35",
         "sender": "测试用户",
+        "avatar": "",
         "kind": "text",
-        "meta": {}
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
       }
     ],
     "tiktok": [
@@ -542,9 +3209,22 @@
         "id": "test-item-tiktok",
         "title": "测试内容",
         "body": "这是一条测试内容。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-19 01:35",
         "sender": "测试用户",
+        "avatar": "",
         "kind": "text",
-        "meta": {}
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
       }
     ],
     "twitter": [
@@ -552,49 +3232,22 @@
         "id": "test-item-twitter",
         "title": "测试内容",
         "body": "这是一条测试内容。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-19 01:35",
         "sender": "测试用户",
+        "avatar": "",
         "kind": "text",
-        "meta": {}
-      }
-    ],
-    "youtube": [
-      {
-        "id": "test-item-youtube",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "snapchat": [
-      {
-        "id": "test-item-snapchat",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "facebook": [
-      {
-        "id": "test-item-facebook",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "reddit": [
-      {
-        "id": "test-item-reddit",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
       }
     ],
     "spotify": [
@@ -602,9 +3255,22 @@
         "id": "test-item-spotify",
         "title": "测试内容",
         "body": "这是一条测试内容。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-19 01:35",
         "sender": "测试用户",
+        "avatar": "",
         "kind": "text",
-        "meta": {}
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
       }
     ],
     "netflix": [
@@ -612,9 +3278,22 @@
         "id": "test-item-netflix",
         "title": "测试内容",
         "body": "这是一条测试内容。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-19 01:35",
         "sender": "测试用户",
+        "avatar": "",
         "kind": "text",
-        "meta": {}
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
       }
     ],
     "pinterest": [
@@ -622,78 +3301,433 @@
         "id": "test-item-pinterest",
         "title": "测试内容",
         "body": "这是一条测试内容。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-19 01:35",
         "sender": "测试用户",
+        "avatar": "",
         "kind": "text",
-        "meta": {}
-      }
-    ],
-    "threads": [
-      {
-        "id": "test-item-threads",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      },
-      {
-        "id": "test-threads-message-1",
-        "title": "测试会话1",
-        "body": "这是一条测试消息。",
-        "sender": "测试联系人1",
-        "folder": "私信"
-      },
-      {
-        "id": "test-threads-activity-1",
-        "title": "测试动态1",
-        "body": "这是一条测试回复动态。",
-        "sender": "测试用户1",
-        "meta": {
-          "activityType": "reply"
-        }
-      },
-      {
-        "id": "test-threads-message-2",
-        "title": "测试会话2",
-        "body": "这是一条测试消息。",
-        "sender": "测试联系人2",
-        "folder": "私信"
-      },
-      {
-        "id": "test-threads-activity-2",
-        "title": "测试动态2",
-        "body": "这是一条测试回复动态。",
-        "sender": "测试用户2",
-        "meta": {
-          "activityType": "reply"
-        }
-      },
-      {
-        "id": "test-threads-message-3",
-        "title": "测试会话3",
-        "body": "这是一条测试消息。",
-        "sender": "测试联系人3",
-        "folder": "私信"
-      },
-      {
-        "id": "test-threads-activity-3",
-        "title": "测试动态3",
-        "body": "这是一条测试回复动态。",
-        "sender": "测试用户3",
-        "meta": {
-          "activityType": "reply"
-        }
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
       }
     ],
     "appstore": [
       {
         "id": "test-appstore",
         "title": "测试内容",
-        "body": "这是一条测试内容。"
+        "body": "这是一条测试内容。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-19 01:35",
+        "sender": "朱志鑫",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": false,
+        "likes": 0,
+        "comments": []
+      }
+    ],
+    "messages": [
+      {
+        "id": "sms-001",
+        "title": "中国移动",
+        "body": "【中国移动】验证码 482916，您正在登录中国移动APP，5分钟内有效。请勿向他人泄露。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-09-03 09:16",
+        "sender": "中国移动",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "sms-002",
+        "title": "Apple",
+        "body": "【Apple】您的 Apple 账户验证码为 731804。请勿与他人分享。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-09-08 22:41",
+        "sender": "Apple",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "sms-003",
+        "title": "支付宝",
+        "body": "【支付宝】验证码 205673，用于身份验证，5分钟内有效。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-09-12 14:08",
+        "sender": "支付宝",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "sms-004",
+        "title": "淘宝",
+        "body": "【淘宝】验证码 694128，正在进行登录验证。若非本人操作请忽略。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-09-18 11:32",
+        "sender": "淘宝",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "sms-005",
+        "title": "微信",
+        "body": "【微信】验证码 318507，用于安全验证，请勿转发给他人。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-09-23 20:05",
+        "sender": "微信",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "sms-006",
+        "title": "中国移动",
+        "body": "【中国移动】尊敬的客户，您本月套餐剩余流量约 12.6GB，可通过中国移动APP查询详情。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-10-01 10:00",
+        "sender": "中国移动",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "sms-007",
+        "title": "抖音",
+        "body": "【抖音】验证码 560291，正在验证您的账号。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-10-04 18:27",
+        "sender": "抖音",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "sms-008",
+        "title": "中国银行",
+        "body": "【中国银行】您尾号 2681 的借记卡于 10月08日 09:42 完成一笔小额快捷支付验证（模拟通知）。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-10-08 09:43",
+        "sender": "中国银行",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "sms-009",
+        "title": "美团外卖",
+        "body": "【美团】您有一张即将到期的优惠券，打开美团APP查看使用规则。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-10-12 12:16",
+        "sender": "美团",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "sms-010",
+        "title": "小红书",
+        "body": "【小红书】验证码 847203，用于登录验证，10分钟内有效。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-10-16 23:11",
+        "sender": "小红书",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "sms-011",
+        "title": "顺丰速运",
+        "body": "【顺丰速运】您有一票快件已发出，运单尾号 5826，请留意物流信息。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-10-21 16:52",
+        "sender": "顺丰速运",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "sms-012",
+        "title": "网易邮箱",
+        "body": "【网易邮箱】验证码 193650，正在进行邮箱安全验证。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-10-26 08:39",
+        "sender": "网易邮箱",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "sms-013",
+        "title": "微博",
+        "body": "【微博】验证码 426815，用于账号登录，请勿泄露。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-10-30 21:06",
+        "sender": "微博",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "sms-014",
+        "title": "中国移动",
+        "body": "【中国移动】温馨提示：您的话费余额充足，感谢使用中国移动通信服务。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-02 08:12",
+        "sender": "中国移动",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "sms-015",
+        "title": "支付宝",
+        "body": "【支付宝】验证码 908341，用于本次安全校验，5分钟内有效。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-06 19:48",
+        "sender": "支付宝",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "sms-016",
+        "title": "淘宝",
+        "body": "【淘宝】您关注的商品有活动提醒，具体优惠以商品页面为准。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-10 13:20",
+        "sender": "淘宝",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "sms-017",
+        "title": "Apple",
+        "body": "【Apple】您的 iCloud 储存空间状态正常。可在设置中管理储存空间。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-13 07:55",
+        "sender": "Apple",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "sms-018",
+        "title": "微信支付",
+        "body": "【微信支付】支付安全提醒：请勿向陌生人透露短信验证码或屏幕共享。",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-17 17:36",
+        "sender": "微信支付",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
       }
     ]
   },
-  "variables": {},
+  "variables": {
+    "wechatAccount": "zzx1119",
+    "wechatName": "x",
+    "neteaseUserId": "x"
+  },
   "events": [],
   "tests": []
 }
