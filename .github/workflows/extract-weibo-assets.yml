@@ -5,6 +5,7 @@ on:
     paths:
       - "public/wb.zip"
       - "public/mzc.zip"
+      - "public/zh.zip"
       - ".github/workflows/extract-weibo-assets.yml"
   workflow_dispatch:
 permissions:
@@ -20,14 +21,16 @@ jobs:
         run: |
           set -euo pipefail
           test -s public/wb.zip
-          mkdir -p extracted/weibo-assets extracted/mzc-assets
+          mkdir -p extracted/weibo-assets extracted/mzc-assets extracted/zh-assets
           unzip -q public/wb.zip -d extracted/weibo-assets
           test -s public/mzc.zip
           unzip -q public/mzc.zip -d extracted/mzc-assets
+          test -s public/zh.zip
+          unzip -q public/zh.zip -d extracted/zh-assets
           python - <<'PY'
           from pathlib import Path
           from PIL import Image, ImageOps, ImageDraw
-          for label in ("weibo", "mzc"):
+          for label in ("weibo", "mzc", "zh"):
               root = Path(f"extracted/{label}-assets")
               files = sorted(p for p in root.rglob("*") if p.is_file())
               lines = []
@@ -55,7 +58,6 @@ jobs:
                       sheet.paste(tile, ((i%cols)*260, (i//cols)*220))
                   sheet.save(f"extracted/{label}-contact-sheet.jpg", quality=90)
               print(f"{label}:\\n" + "\\n".join(lines))
-          print("\n".join(lines))
           PY
       - name: Publish extracted WeChat avatars
         run: |
