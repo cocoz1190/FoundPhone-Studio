@@ -4140,7 +4140,11 @@
 .contacts-reference-row {
   display: flex; align-items: center; gap: 13px; width: 100%;
   min-height: 80px; padding: 10px 14px; text-align: left;
-  border-bottom: 1px solid #e6e6e6; color: #111; background: #fff;
+  border-bottom: 0; color: #111; background: #fff;
+}
+.contacts-reference-row > span:last-child {
+  align-self: stretch; justify-content: center;
+  border-bottom: 1px solid #e6e6e6;
 }
 .contacts-reference-row .catalog-avatar {
   width: 56px; height: 56px; border-radius: 50%;
