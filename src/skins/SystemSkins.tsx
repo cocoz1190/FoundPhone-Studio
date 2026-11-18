@@ -46,7 +46,14 @@ export function PhoneSkin(p: Props) {
   const { tab, setTab, q, setQ, items } = useContent(p, "最近通话");
   const [digits, setDigits] = useState(""),
     [call, setCall] = useState("");
-  const list = tab === "收藏" ? items.filter((i) => i.favorite) : items;
+  const list =
+    tab === "收藏"
+      ? items.filter((i) => i.favorite)
+      : tab === "通讯录"
+        ? items.filter((i) => i.kind !== "call")
+        : tab === "最近通话"
+          ? items.filter((i) => i.kind === "call")
+          : items;
   return (
     <div className="catalog-skin native-phone">
       <Header p={p} />
@@ -142,42 +149,28 @@ export function PhoneSkin(p: Props) {
 }
 export function ContactsSkin(p: Props) {
   const { q, setQ, items } = useContent(p, "所有联系人");
+  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ#".split("");
+  const list = items.filter((i) => i.title !== (p.owner ?? ""));
   return (
     <div className="catalog-skin native-contacts">
       <Header p={p} />
-      <div className="catalog-scroll">
+      <div className="catalog-scroll contacts-reference-list">
         <h1>通讯录</h1>
         <SearchBox value={q} set={setQ} />
-        <button
-          className="contact-self"
-          onClick={() => {
-            if (items[0]) p.onItem(items[0]);
-            else if (p.creator) p.onAdd();
-          }}
-        >
-          <Avatar name={p.owner ?? "我"} />
-          <span>
-            <strong>{p.owner ?? "我的名片"}</strong>
-            <small>我的名片</small>
-          </span>
-        </button>
-        {groupItems(items, "所有联系人").map((g) => (
-          <section key={g}>
-            <h4 className="native-section">{g}</h4>
-            {items
-              .filter((i) => (i.folder || "所有联系人") === g)
-              .sort((a, b) => a.title.localeCompare(b.title, "zh-CN"))
-              .map((i) => (
-                <Row
-                  key={i.id}
-                  item={i}
-                  onItem={p.onItem}
-                  leading={<Avatar name={i.title} />}
-                />
-              ))}
-          </section>
-        ))}
-        <Empty items={items} />
+        <div className="contacts-reference-body">
+          <div className="contacts-reference-rows">
+            {list.map((i) => (
+              <button className="contacts-reference-row" key={i.id} onClick={() => p.onItem(i)}>
+                <Avatar name={i.title} />
+                <span><strong>{i.title}</strong><small>{meta(i, "phone", i.title)}</small></span>
+              </button>
+            ))}
+            <Empty items={list} />
+          </div>
+          <nav className="contacts-alpha" aria-label="字母索引">
+            {alphabet.map((letter) => <span key={letter}>{letter}</span>)}
+          </nav>
+        </div>
       </div>
     </div>
   );
