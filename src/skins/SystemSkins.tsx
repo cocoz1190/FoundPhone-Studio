@@ -106,24 +106,44 @@ export function PhoneSkin(p: Props) {
         ) : (
           <>
             <SearchBox value={q} set={setQ} />
-            {list.map((i) => (
-              <button
-                className={`call-row ${meta(i, "status") === "未接" ? "missed" : ""}`}
-                key={i.id}
-                onClick={() => p.onItem(i)}
-              >
-                <Phone size={17} />
-                <span>
-                  <strong>{i.title}</strong>
-                  <small>
-                    {meta(i, "number", i.sender)} ·{" "}
-                    {meta(i, "status", "通话记录")}
-                  </small>
-                </span>
-                <time>{i.time.slice(5, 10)}</time>
-              </button>
-            ))}
-            <Empty items={list} />
+            {tab === "通讯录" ? (
+              <div className="phone-contact-list">
+                {list.map((i) => (
+                  <button className="phone-contact-row" key={i.id} onClick={() => p.onItem(i)}>
+                    <Avatar name={i.title} />
+                    <span>
+                      <strong>{i.title}</strong>
+                      <small>{meta(i, "phone", i.title)}</small>
+                    </span>
+                  </button>
+                ))}
+                <nav className="contacts-alpha" aria-label="字母索引">
+                  {"ABCDEFGHIJKLMNOPQRSTUVWXYZ#".split("").map((letter) => <span key={letter}>{letter}</span>)}
+                </nav>
+                <Empty items={list} />
+              </div>
+            ) : (
+              <>
+                {list.map((i) => (
+                  <button
+                    className={`call-row ${meta(i, "status") === "未接" ? "missed" : ""}`}
+                    key={i.id}
+                    onClick={() => p.onItem(i)}
+                  >
+                    <Phone size={17} />
+                    <span>
+                      <strong>{i.title}</strong>
+                      <small>
+                        {meta(i, "number", i.sender)} ·{" "}
+                        {meta(i, "status", "通话记录")}
+                      </small>
+                    </span>
+                    <time>{i.time.slice(5, 10)}</time>
+                  </button>
+                ))}
+                <Empty items={list} />
+              </>
+            )}
           </>
         )}
       </div>
