@@ -24,13 +24,13 @@ describe("AI story compiler", () => {
     t.events[1].actions![0].key = "missing";
     expect(() => compileStory(t)).toThrow("不存在的内容");
   });
-  it("rejects duplicate IDs and absent participants", () => {
+  it("rejects duplicate IDs while allowing chat-only participants", () => {
     const s = copy();
     s.chats[0].messages[0].id = "wx-password";
     expect(() => compileStory(s)).toThrow("重复 ID");
     const t = copy();
-    t.chats[0].participants.push("missing");
-    expect(() => compileStory(t)).toThrow("联系人不存在");
+    t.chats[0].participants.push("chat-only-contact");
+    expect(() => compileStory(t)).not.toThrow();
   });
   it("does not allow a test to bypass hidden content or wrong passwords", () => {
     const { story, work } = compileStory(copy());
