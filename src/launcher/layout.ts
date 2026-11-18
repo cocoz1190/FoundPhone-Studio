@@ -33,6 +33,10 @@ export const layoutSchema = z
 export type DeviceLayout = z.infer<typeof layoutSchema>;
 export type Widget = z.infer<typeof widgetSchema>;
 export type AppConfig = Work["apps"][number];
+
+// Apps explicitly removed from this phone must stay removed even when an old
+// browser layout is restored from localStorage or imported again.
+export const removedAppIds = new Set(["taobao", "delivery", "tiktok", "instagram", "twitter", "spotify", "netflix", "pinterest"]);
 export function ensureAppStore(work: Work): Work {
   return work.apps.some((a) => a.id === "appstore")
     ? work
@@ -61,9 +65,11 @@ export function defaultLayout(input: Work): DeviceLayout {
     apps: structuredClone(w.apps)
       .sort((a, b) => (a.id === "appstore" ? -1 : b.id === "appstore" ? 1 : 0))
       .map((a) =>
-        a.id === "appstore"
-          ? { ...a, installed: true, visible: true, folder: "", dock: false }
-          : a,
+        removedAppIds.has(a.id)
+          ? { ...a, installed: false, visible: false, dock: false, folder: "" }
+          : a.id === "appstore"
+            ? { ...a, installed: true, visible: true, folder: "", dock: false }
+            : a,
       ),
     widgets: [],
     order: [],
@@ -74,6 +80,16 @@ export function defaultLayout(input: Work): DeviceLayout {
 export function validateLayout(raw: unknown, input: Work) {
   const w = ensureAppStore(input);
   const layout = layoutSchema.parse(raw);
+  for (const app of layout.apps) {
+    if (removedAppIds.has(app.id)) {
+      app.installed = false;
+      app.visible = false;
+      app.dock = false;
+      app.folder = "";
+      delete layout.positions[app.id];
+    }
+  }
+  layout.order = layout.order.filter((id) => !removedAppIds.has(id));
   if (layout.workId !== w.id) throw Error("布局属于其他作品");
   const known = new Set(w.apps.map((a) => a.id));
   if (layout.apps.some((a) => !known.has(a.id))) throw Error("布局含未注册App");
@@ -173,10 +189,12 @@ export function useDeviceLayout(authored: Work, creator = false) {
       ...base,
       apps,
       data: Object.fromEntries(
-        Object.entries(base.data).map(([id, items]) => [
-          id,
-          layout.cleared.includes(id) ? [] : items,
-        ]),
+        Object.entries(base.data)
+          .filter(([id]) => !removedAppIds.has(id))
+          .map(([id, items]) => [
+            id,
+            layout.cleared.includes(id) ? [] : items,
+          ]),
       ),
     };
   }, [base, creator, layout]);
