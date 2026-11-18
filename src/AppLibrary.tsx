@@ -24,6 +24,7 @@ import {
   newCustomApp,
 } from "./apps";
 import { mediaData } from "./io";
+import { removedAppIds } from "./launcher/layout";
 export function AppManager({
   work,
   onChange,
@@ -47,9 +48,9 @@ export function AppManager({
     [dragging, setDragging] = useState("");
   const drag = useRef("");
   const catalog = [
-    ...work.apps,
+    ...work.apps.filter((a) => !removedAppIds.has(a.id)),
     ...registry
-      .filter((r) => !work.apps.some((a) => a.id === r.id))
+      .filter((r) => !removedAppIds.has(r.id) && !work.apps.some((a) => a.id === r.id))
       .map((a) => ({
         id: a.id,
         name: a.name,
