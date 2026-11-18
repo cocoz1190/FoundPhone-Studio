@@ -57,13 +57,12 @@ function Avatar({
   round?: boolean;
   src?: string;
 }) {
+  const imageSrc =
+    safeMedia(src) ||
+    (src.startsWith("/FoundPhone-Studio/wechat-assets/") ? src : "");
   return (
     <span className={`skin-avatar ${round ? "round" : ""}`}>
-      {safeMedia(src)?.startsWith("data:image/") ? (
-        <img src={safeMedia(src)} alt="" />
-      ) : (
-        name.slice(0, 1)
-      )}
+      {imageSrc ? <img src={imageSrc} alt="" /> : name.slice(0, 1)}
     </span>
   );
 }
@@ -98,35 +97,40 @@ function MessageList({
 }) {
   return (
     <div className={`skin-messages ${whatsapp ? "wa-wallpaper" : ""}`}>
-      <div className="skin-date">{items[0]?.time.slice(0, 10)}</div>
       {items.map((i) => (
-        <div
-          key={i.id}
-          className={`skin-message ${i.outgoing ? "outgoing" : ""}`}
-        >
-          {!whatsapp && !i.outgoing && (
-            <Avatar name={i.sender} src={i.avatar} />
+        <div key={i.id}>
+          {i.meta?.dateLabel && (
+            <div className="skin-date">{i.meta.dateLabel}</div>
           )}
-          <button
-            className="skin-bubble"
-            onClick={() => (creator ? onItem(i) : onRead(i.id))}
-          >
-            {["image", "audio", "video"].includes(i.kind) ? (
-              <ItemMedia item={i} />
-            ) : i.kind === "transfer" ? (
-              <div className="skin-transfer">
-                ¥ {i.body}
-                <small>转账记录 · 虚构</small>
-              </div>
-            ) : (
-              i.body
-            )}
-            <small className={whatsapp ? undefined : "wx-message-time"}>
-              {i.time.slice(-5)}{" "}
-              {whatsapp && i.outgoing && <CheckCheck size={11} />}
-            </small>
-          </button>
-          {!whatsapp && i.outgoing && <Avatar name={i.sender} src={i.avatar} />}
+          {i.kind === "event" ? (
+            <div className="skin-date">{i.body}</div>
+          ) : (
+            <div className={`skin-message ${i.outgoing ? "outgoing" : ""}`}>
+              {!whatsapp && !i.outgoing && (
+                <Avatar name={i.sender} src={i.avatar} />
+              )}
+              <button
+                className="skin-bubble"
+                onClick={() => (creator ? onItem(i) : onRead(i.id))}
+              >
+                {["image", "audio", "video"].includes(i.kind) ? (
+                  <ItemMedia item={i} />
+                ) : i.kind === "transfer" ? (
+                  <div className="skin-transfer">
+                    ¥ {i.body}
+                    <small>转账记录 · 虚构</small>
+                  </div>
+                ) : (
+                  i.body
+                )}
+                <small className={whatsapp ? undefined : "wx-message-time"}>
+                  {i.time.slice(-5)}{" "}
+                  {whatsapp && i.outgoing && <CheckCheck size={11} />}
+                </small>
+              </button>
+              {!whatsapp && i.outgoing && <Avatar name={i.sender} src={i.avatar} />}
+            </div>
+          )}
         </div>
       ))}
     </div>
