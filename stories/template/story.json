@@ -251,15 +251,6 @@
       "icon": ""
     },
     {
-      "id": "pinterest",
-      "name": "Pinterest",
-      "installed": false,
-      "visible": false,
-      "dock": false,
-      "folder": "",
-      "icon": ""
-    },
-    {
       "id": "qq",
       "name": "QQ",
       "installed": false,
