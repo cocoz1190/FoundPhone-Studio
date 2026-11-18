@@ -36,7 +36,7 @@ export type AppConfig = Work["apps"][number];
 
 // Apps explicitly removed from this phone must stay removed even when an old
 // browser layout is restored from localStorage or imported again.
-export const removedAppIds = new Set(["taobao", "delivery", "tiktok", "instagram", "twitter", "spotify", "netflix"]);
+export const removedAppIds = new Set(["taobao", "delivery", "tiktok", "instagram", "twitter", "spotify", "netflix", "pinterest"]);
 export function ensureAppStore(work: Work): Work {
   return work.apps.some((a) => a.id === "appstore")
     ? work
