@@ -199,37 +199,12 @@ export function advance(
     s.scheduled.sort((a, b) => a.due - b.due);
     const due =
       w.mode !== "explore" && resumes < 200 ? s.scheduled[0] : undefined;
-    const clockAt = s.elapsedMs + 60000 - s.clockRemainderMs;
+    // Keep the configured phone display time fixed; story timers use elapsedMs independently.
     const next = Math.min(
       end,
-      clockAt,
       due ? Math.max(s.elapsedMs, due.due) : Infinity,
     );
-    s.clockRemainderMs += next - s.elapsedMs;
     s.elapsedMs = next;
-    if (s.clockRemainderMs >= 60000) {
-      s.clockRemainderMs -= 60000;
-      const match = s.time.match(/^(\d{1,2}):(\d{2})$/);
-      if (match) {
-        const value = (Number(match[1]) * 60 + Number(match[2]) + 1) % 1440;
-        s.time =
-          String(Math.floor(value / 60)).padStart(2, "0") +
-          ":" +
-          String(value % 60).padStart(2, "0");
-        if (w.mode !== "explore")
-          runQueue(
-            w,
-            s,
-            "time",
-            s.time,
-            w.nodes
-              .filter(
-                (n) => n.event === "time" && (!n.target || n.target === s.time),
-              )
-              .map((n) => n.id),
-          );
-      }
-    }
     if (due && due.due <= s.elapsedMs) {
       s.scheduled.splice(s.scheduled.indexOf(due), 1);
       resumes++;
