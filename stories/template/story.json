@@ -242,73 +242,10 @@
       "icon": ""
     },
     {
-      "id": "taobao",
-      "name": "淘宝",
-      "installed": false,
-      "visible": false,
-      "dock": false,
-      "folder": "",
-      "icon": ""
-    },
-    {
       "id": "netease",
       "name": "网易云音乐",
       "installed": true,
       "visible": true,
-      "dock": false,
-      "folder": "",
-      "icon": ""
-    },
-    {
-      "id": "delivery",
-      "name": "美团外卖",
-      "installed": false,
-      "visible": false,
-      "dock": false,
-      "folder": "",
-      "icon": ""
-    },
-    {
-      "id": "instagram",
-      "name": "Instagram",
-      "installed": false,
-      "visible": false,
-      "dock": false,
-      "folder": "",
-      "icon": ""
-    },
-    {
-      "id": "tiktok",
-      "name": "TikTok",
-      "installed": false,
-      "visible": false,
-      "dock": false,
-      "folder": "",
-      "icon": ""
-    },
-    {
-      "id": "twitter",
-      "name": "X",
-      "installed": false,
-      "visible": false,
-      "dock": false,
-      "folder": "",
-      "icon": ""
-    },
-    {
-      "id": "spotify",
-      "name": "Spotify",
-      "installed": false,
-      "visible": false,
-      "dock": false,
-      "folder": "",
-      "icon": ""
-    },
-    {
-      "id": "netflix",
-      "name": "Netflix",
-      "installed": false,
-      "visible": false,
       "dock": false,
       "folder": "",
       "icon": ""
