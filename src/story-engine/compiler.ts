@@ -166,7 +166,7 @@ export function compileStory(raw: unknown): { story: Story; work: Work } {
   for (const [app, items] of Object.entries(s.content))
     items.forEach((i, n) => add(app, i, `content.${app}.${n}`));
   s.contacts.forEach((c, n) => {
-    if (c.avatar && !safeMedia(c.avatar))
+    if (c.avatar && !safeMedia(c.avatar) && !c.avatar.startsWith("/FoundPhone-Studio/wechat-assets/"))
       fail(`contacts.${n}.avatar`, "无效头像");
     if (installed.has("contacts"))
       add(
