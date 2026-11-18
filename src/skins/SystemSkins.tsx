@@ -120,7 +120,7 @@ export function PhoneSkin(p: Props) {
                     <Avatar name={i.title} />
                     <span>
                       <strong>{i.title}</strong>
-                      <small>{meta(i, "phone", i.title)}</small>
+                      {meta(i, "phone") && <small>{meta(i, "phone")}</small>}
                     </span>
                   </button>
                 ))}
