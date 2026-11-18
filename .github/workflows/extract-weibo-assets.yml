@@ -1,0 +1,58 @@
+name: Extract Weibo ZIP assets
+on:
+  push:
+    branches: [main]
+    paths:
+      - "public/wb.zip"
+      - ".github/workflows/extract-weibo-assets.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract archive and build image inventory
+        run: |
+          set -euo pipefail
+          test -s public/wb.zip
+          mkdir -p extracted/weibo-assets
+          unzip -q public/wb.zip -d extracted/weibo-assets
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageOps, ImageDraw
+          root = Path("extracted/weibo-assets")
+          files = sorted(p for p in root.rglob("*") if p.is_file())
+          lines = []
+          thumbs = []
+          for p in files:
+              try:
+                  with Image.open(p) as im:
+                      im.verify()
+                  with Image.open(p) as im:
+                      im = ImageOps.exif_transpose(im).convert("RGB")
+                      lines.append(f"{p.relative_to(root)}\t{im.width}x{im.height}\t{p.stat().st_size} bytes")
+                      im.thumbnail((240, 180))
+                      tile = Image.new("RGB", (260, 220), "white")
+                      tile.paste(im, ((260-im.width)//2, 8))
+                      ImageDraw.Draw(tile).text((8, 192), p.name[:36], fill="black")
+                      thumbs.append(tile)
+              except Exception:
+                  lines.append(f"{p.relative_to(root)}\t(non-image)\t{p.stat().st_size} bytes")
+          (Path("extracted/manifest.txt")).write_text("\n".join(lines), encoding="utf-8")
+          if thumbs:
+              cols = 4
+              rows = (len(thumbs) + cols - 1) // cols
+              sheet = Image.new("RGB", (cols*260, rows*220), "#dddddd")
+              for i, tile in enumerate(thumbs):
+                  sheet.paste(tile, ((i%cols)*260, (i//cols)*220))
+              sheet.save("extracted/contact-sheet.jpg", quality=90)
+          print("\n".join(lines))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: weibo-assets-extracted
+          path: extracted/
+          if-no-files-found: error
+          retention-days: 7
