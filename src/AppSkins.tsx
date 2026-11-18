@@ -67,7 +67,7 @@ function Avatar({
   );
 }
 function ItemMedia({ item }: { item: Item }) {
-  const src = safeMedia(item.media);
+  const src = safeMedia(item.media) || (item.media.startsWith("/FoundPhone-Studio/wechat-assets/") ? item.media : "");
   return src ? (
     item.kind === "audio" ? (
       <audio controls src={src} />
