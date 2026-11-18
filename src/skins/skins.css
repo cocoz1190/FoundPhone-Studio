@@ -4204,3 +4204,21 @@
   margin: 0 !important;
   text-align: left !important;
 }
+
+
+/* The avatar itself inherited an auto-centering margin, shifting the whole
+   contact group toward the middle. Reset the child margin, not just text alignment. */
+.catalog-skin.native-contacts .contacts-reference-row > .catalog-avatar,
+.catalog-skin.native-phone .phone-contact-row > .catalog-avatar {
+  margin: 0 !important;
+  margin-inline: 0 !important;
+  justify-self: start !important;
+  flex: 0 0 56px !important;
+}
+.catalog-skin.native-contacts .contacts-reference-row,
+.catalog-skin.native-phone .phone-contact-row {
+  padding-left: 14px !important;
+  padding-right: 14px !important;
+  gap: 13px !important;
+  justify-content: flex-start !important;
+}
