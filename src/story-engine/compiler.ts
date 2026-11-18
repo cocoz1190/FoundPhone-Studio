@@ -149,7 +149,7 @@ export function compileStory(raw: unknown): { story: Story; work: Work } {
       if (
         item[k] &&
         !safeMedia(item[k]) &&
-        !(k === "avatar" && item.avatar.startsWith("/FoundPhone-Studio/wechat-assets/"))
+        !item[k].startsWith("/FoundPhone-Studio/wechat-assets/")
       )
         fail(p + "." + k, "仅允许受支持的内嵌媒体或站内头像资源，不允许脚本或远程资源");
     if (item.richText) {
