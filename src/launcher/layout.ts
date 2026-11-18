@@ -36,7 +36,7 @@ export type AppConfig = Work["apps"][number];
 
 // Apps explicitly removed from this phone must stay removed even when an old
 // browser layout is restored from localStorage or imported again.
-export const removedAppIds = new Set(["taobao", "delivery", "tiktok", "instagram", "twitter", "spotify", "netflix", "pinterest"]);
+export const removedAppIds = new Set(["taobao", "delivery", "tiktok", "instagram", "twitter", "spotify", "netflix"]);
 export function ensureAppStore(work: Work): Work {
   return work.apps.some((a) => a.id === "appstore")
     ? work
@@ -63,6 +63,7 @@ export function defaultLayout(input: Work): DeviceLayout {
     workId: w.id,
     previewLayoutRevision: w.id === "ui-test-phone-v2" ? 1 : 0,
     apps: structuredClone(w.apps)
+      .filter((a) => !removedAppIds.has(a.id))
       .sort((a, b) => (a.id === "appstore" ? -1 : b.id === "appstore" ? 1 : 0))
       .map((a) =>
         removedAppIds.has(a.id)
@@ -80,16 +81,9 @@ export function defaultLayout(input: Work): DeviceLayout {
 export function validateLayout(raw: unknown, input: Work) {
   const w = ensureAppStore(input);
   const layout = layoutSchema.parse(raw);
-  for (const app of layout.apps) {
-    if (removedAppIds.has(app.id)) {
-      app.installed = false;
-      app.visible = false;
-      app.dock = false;
-      app.folder = "";
-      delete layout.positions[app.id];
-    }
-  }
+  layout.apps = layout.apps.filter((app) => !removedAppIds.has(app.id));
   layout.order = layout.order.filter((id) => !removedAppIds.has(id));
+  for (const id of removedAppIds) delete layout.positions[id];
   if (layout.workId !== w.id) throw Error("布局属于其他作品");
   const known = new Set(w.apps.map((a) => a.id));
   if (layout.apps.some((a) => !known.has(a.id))) throw Error("布局含未注册App");
@@ -102,7 +96,7 @@ export function validateLayout(raw: unknown, input: Work) {
   if (layout.widgets.some((w) => known.has(w.id)))
     throw Error("小组件与App ID冲突");
   layout.apps.push(
-    ...w.apps.filter((a) => !layout.apps.some((b) => b.id === a.id)),
+    ...w.apps.filter((a) => !removedAppIds.has(a.id) && !layout.apps.some((b) => b.id === a.id)),
   );
   const store = layout.apps.find((a) => a.id === "appstore");
   if (store) {
@@ -182,8 +176,8 @@ export function useDeviceLayout(authored: Work, creator = false) {
     if (creator) return base;
     const known = new Map(base.apps.map((a) => [a.id, a]));
     const apps = [
-      ...layout.apps.filter((a) => known.has(a.id)),
-      ...base.apps.filter((a) => !layout.apps.some((b) => b.id === a.id)),
+      ...layout.apps.filter((a) => known.has(a.id) && !removedAppIds.has(a.id)),
+      ...base.apps.filter((a) => !removedAppIds.has(a.id) && !layout.apps.some((b) => b.id === a.id)),
     ];
     return {
       ...base,
