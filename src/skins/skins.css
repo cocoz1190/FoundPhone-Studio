@@ -4171,3 +4171,36 @@
 .phone-contact-row span:last-child { display:flex; flex-direction:column; align-items:flex-start; gap:5px; text-align:left; }
 .phone-contact-row strong { font-size:15px; font-weight:600; }
 .phone-contact-row small { color:#999; font-size:12px; }
+
+
+/* Hard override for contact rows: keep names anchored to the left edge
+   of the text column, regardless of global button/span alignment rules. */
+.catalog-skin.native-contacts .contacts-reference-rows > .contacts-reference-row,
+.catalog-skin.native-phone .phone-contact-list > .phone-contact-row {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  text-align: left !important;
+}
+.catalog-skin.native-contacts .contacts-reference-row > span:last-child,
+.catalog-skin.native-phone .phone-contact-row > span:last-child {
+  display: flex !important;
+  flex: 1 1 auto !important;
+  width: 0 !important;
+  min-width: 0 !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  align-self: stretch !important;
+  text-align: left !important;
+  margin: 0 !important;
+}
+.catalog-skin.native-contacts .contacts-reference-row > span:last-child > strong,
+.catalog-skin.native-phone .phone-contact-row > span:last-child > strong {
+  display: block !important;
+  align-self: flex-start !important;
+  width: 100% !important;
+  margin: 0 !important;
+  text-align: left !important;
+}
