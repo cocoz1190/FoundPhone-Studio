@@ -244,8 +244,8 @@
     {
       "id": "taobao",
       "name": "淘宝",
-      "installed": true,
-      "visible": true,
+      "installed": false,
+      "visible": false,
       "dock": false,
       "folder": "",
       "icon": ""
@@ -262,8 +262,8 @@
     {
       "id": "delivery",
       "name": "美团外卖",
-      "installed": true,
-      "visible": true,
+      "installed": false,
+      "visible": false,
       "dock": false,
       "folder": "",
       "icon": ""
@@ -271,8 +271,8 @@
     {
       "id": "instagram",
       "name": "Instagram",
-      "installed": true,
-      "visible": true,
+      "installed": false,
+      "visible": false,
       "dock": false,
       "folder": "",
       "icon": ""
@@ -280,8 +280,8 @@
     {
       "id": "tiktok",
       "name": "TikTok",
-      "installed": true,
-      "visible": true,
+      "installed": false,
+      "visible": false,
       "dock": false,
       "folder": "",
       "icon": ""
@@ -289,8 +289,8 @@
     {
       "id": "twitter",
       "name": "X",
-      "installed": true,
-      "visible": true,
+      "installed": false,
+      "visible": false,
       "dock": false,
       "folder": "",
       "icon": ""
@@ -298,8 +298,8 @@
     {
       "id": "spotify",
       "name": "Spotify",
-      "installed": true,
-      "visible": true,
+      "installed": false,
+      "visible": false,
       "dock": false,
       "folder": "",
       "icon": ""
@@ -307,8 +307,8 @@
     {
       "id": "netflix",
       "name": "Netflix",
-      "installed": true,
-      "visible": true,
+      "installed": false,
+      "visible": false,
       "dock": false,
       "folder": "",
       "icon": ""
@@ -2066,29 +2066,6 @@
         "comments": []
       }
     ],
-    "taobao": [
-      {
-        "id": "test-item-taobao",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "richText": "",
-        "meta": {},
-        "time": "2026-11-19 01:35",
-        "sender": "测试用户",
-        "avatar": "",
-        "kind": "text",
-        "media": "",
-        "hidden": false,
-        "unlock": "",
-        "password": "",
-        "folder": "",
-        "favorite": false,
-        "outgoing": false,
-        "read": false,
-        "likes": 0,
-        "comments": []
-      }
-    ],
     "netease": [
       {
         "id": "netease-track-01",
@@ -3119,144 +3096,6 @@
         "unlock": "",
         "password": "",
         "folder": "朱",
-        "favorite": false,
-        "outgoing": false,
-        "read": false,
-        "likes": 0,
-        "comments": []
-      }
-    ],
-    "delivery": [
-      {
-        "id": "test-item-delivery",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "richText": "",
-        "meta": {},
-        "time": "2026-11-19 01:35",
-        "sender": "测试用户",
-        "avatar": "",
-        "kind": "text",
-        "media": "",
-        "hidden": false,
-        "unlock": "",
-        "password": "",
-        "folder": "",
-        "favorite": false,
-        "outgoing": false,
-        "read": false,
-        "likes": 0,
-        "comments": []
-      }
-    ],
-    "instagram": [
-      {
-        "id": "test-item-instagram",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "richText": "",
-        "meta": {},
-        "time": "2026-11-19 01:35",
-        "sender": "测试用户",
-        "avatar": "",
-        "kind": "text",
-        "media": "",
-        "hidden": false,
-        "unlock": "",
-        "password": "",
-        "folder": "",
-        "favorite": false,
-        "outgoing": false,
-        "read": false,
-        "likes": 0,
-        "comments": []
-      }
-    ],
-    "tiktok": [
-      {
-        "id": "test-item-tiktok",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "richText": "",
-        "meta": {},
-        "time": "2026-11-19 01:35",
-        "sender": "测试用户",
-        "avatar": "",
-        "kind": "text",
-        "media": "",
-        "hidden": false,
-        "unlock": "",
-        "password": "",
-        "folder": "",
-        "favorite": false,
-        "outgoing": false,
-        "read": false,
-        "likes": 0,
-        "comments": []
-      }
-    ],
-    "twitter": [
-      {
-        "id": "test-item-twitter",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "richText": "",
-        "meta": {},
-        "time": "2026-11-19 01:35",
-        "sender": "测试用户",
-        "avatar": "",
-        "kind": "text",
-        "media": "",
-        "hidden": false,
-        "unlock": "",
-        "password": "",
-        "folder": "",
-        "favorite": false,
-        "outgoing": false,
-        "read": false,
-        "likes": 0,
-        "comments": []
-      }
-    ],
-    "spotify": [
-      {
-        "id": "test-item-spotify",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "richText": "",
-        "meta": {},
-        "time": "2026-11-19 01:35",
-        "sender": "测试用户",
-        "avatar": "",
-        "kind": "text",
-        "media": "",
-        "hidden": false,
-        "unlock": "",
-        "password": "",
-        "folder": "",
-        "favorite": false,
-        "outgoing": false,
-        "read": false,
-        "likes": 0,
-        "comments": []
-      }
-    ],
-    "netflix": [
-      {
-        "id": "test-item-netflix",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "richText": "",
-        "meta": {},
-        "time": "2026-11-19 01:35",
-        "sender": "测试用户",
-        "avatar": "",
-        "kind": "text",
-        "media": "",
-        "hidden": false,
-        "unlock": "",
-        "password": "",
-        "folder": "",
         "favorite": false,
         "outgoing": false,
         "read": false,
