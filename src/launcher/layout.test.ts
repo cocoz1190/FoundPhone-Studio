@@ -11,9 +11,9 @@ import {
 } from "./layout";
 const work = () => compileStory(blank).work;
 describe("device layout", () => {
-  it("keeps all 47 apps and only defaults installed", () => {
+  it("excludes removed apps and keeps only defaults installed", () => {
     const l = defaultLayout(work());
-    expect(l.apps).toHaveLength(49);
+    expect(l.apps).toHaveLength(42);
     expect(l.apps.filter((a) => a.installed)).toHaveLength(7);
   });
   it("packs different widget sizes and pages without overlap", () => {
@@ -103,11 +103,10 @@ it("migrates preview folders once while preserving custom folders and widgets", 
   old.previewLayoutRevision = 0;
   old.apps.find((a) => a.id === "wechat")!.folder = "聊天";
   old.apps.find((a) => a.id === "douyin")!.folder = "国内";
-  old.apps.find((a) => a.id === "instagram")!.folder = "国际";
   old.apps.find((a) => a.id === "clock")!.folder = "我的工具";
   old.widgets.push({ id: "widget-keep", type: "battery", size: "small" });
   const migrated = validateLayout(old, w);
-  for (const id of ["wechat", "douyin", "instagram"])
+  for (const id of ["wechat", "douyin"])
     expect(migrated.apps.find((a) => a.id === id)!.folder).toBe("");
   expect(migrated.apps.find((a) => a.id === "clock")!.folder).toBe("我的工具");
   expect(migrated.widgets).toEqual(old.widgets);
@@ -117,3 +116,5 @@ it("migrates preview folders once while preserving custom folders and widgets", 
     validateLayout(migrated, w).apps.find((a) => a.id === "wechat")!.folder,
   ).toBe("作者新建文件夹");
 });
+
+it("keeps removed apps out of restored layouts", () => { const w = work(); const l = defaultLayout(w); for (const id of ["taobao","delivery","tiktok","instagram","twitter","spotify","netflix"]) { const app = w.apps.find((a) => a.id === id); if (app) l.apps.push({ ...app, installed: true, visible: true, dock: false }); l.order.push(id); l.positions[id] = { page: 0, x: 0, y: 0 }; } const restored = validateLayout(l, w); for (const id of ["taobao","delivery","tiktok","instagram","twitter","spotify","netflix"]) { expect(restored.apps.some((a) => a.id === id)).toBe(false); expect(restored.order).not.toContain(id); expect(restored.positions[id]).toBeUndefined(); } });
