@@ -462,97 +462,41 @@
     {
       "id": "zhangji",
       "name": "张极",
-      "phone": "",
+      "phone": "138****5621",
       "avatar": "",
       "bio": ""
     },
     {
       "id": "zuohang",
       "name": "左航",
-      "phone": "",
-      "avatar": "",
-      "bio": ""
-    },
-    {
-      "id": "zhangzeyu",
-      "name": "张泽禹",
-      "phone": "",
+      "phone": "186****3074",
       "avatar": "",
       "bio": ""
     },
     {
       "id": "suxinhao",
       "name": "苏新皓",
-      "phone": "",
+      "phone": "177****4913",
+      "avatar": "",
+      "bio": ""
+    },
+    {
+      "id": "zhangzeyu",
+      "name": "张泽禹",
+      "phone": "159****8246",
       "avatar": "",
       "bio": ""
     },
     {
       "id": "mom",
       "name": "妈",
-      "phone": "",
+      "phone": "135****7608",
       "avatar": "",
       "bio": ""
     },
     {
       "id": "assistant",
       "name": "助理",
-      "phone": "",
-      "avatar": "",
-      "bio": ""
-    },
-    {
-      "id": "zhangjunhao",
-      "name": "张峻豪",
-      "phone": "",
-      "avatar": "",
-      "bio": ""
-    },
-    {
-      "id": "yuyuhan",
-      "name": "余宇涵",
-      "phone": "",
-      "avatar": "",
-      "bio": ""
-    },
-    {
-      "id": "muzhicheng",
-      "name": "穆祉丞",
-      "phone": "",
-      "avatar": "",
-      "bio": ""
-    },
-    {
-      "id": "zhangzimo",
-      "name": "张子墨",
-      "phone": "",
-      "avatar": "",
-      "bio": ""
-    },
-    {
-      "id": "huangshuo",
-      "name": "黄朔",
-      "phone": "",
-      "avatar": "",
-      "bio": ""
-    },
-    {
-      "id": "feige",
-      "name": "飞哥",
-      "phone": "",
-      "avatar": "",
-      "bio": ""
-    },
-    {
-      "id": "lifei",
-      "name": "李飞",
-      "phone": "",
-      "avatar": "",
-      "bio": ""
-    },
-    {
-      "id": "boss",
-      "name": "boss",
       "phone": "",
       "avatar": "",
       "bio": ""
@@ -997,7 +941,8 @@
           "favorite": false,
           "outgoing": false,
           "read": true,
-          "likes": 0,          "comments": []
+          "likes": 0,
+          "comments": []
         },
         {
           "id": "muzhicheng-restore-15",
@@ -1500,7 +1445,7 @@
       {
         "id": "zhangji-phone-card",
         "title": "张极",
-        "body": "",
+        "body": "张极",
         "richText": "",
         "meta": {
           "phone": "138****5621"
@@ -1516,14 +1461,14 @@
         "folder": "",
         "favorite": false,
         "outgoing": false,
-        "read": false,
+        "read": true,
         "likes": 0,
         "comments": []
       },
       {
         "id": "zuohang-phone-card",
         "title": "左航",
-        "body": "",
+        "body": "左航",
         "richText": "",
         "meta": {
           "phone": "186****3074"
@@ -1539,37 +1484,14 @@
         "folder": "",
         "favorite": false,
         "outgoing": false,
-        "read": false,
-        "likes": 0,
-        "comments": []
-      },
-      {
-        "id": "zhangzeyu-phone-card",
-        "title": "张泽禹",
-        "body": "",
-        "richText": "",
-        "meta": {
-          "phone": "159****8246"
-        },
-        "time": "2026-11-19 01:35",
-        "sender": "张泽禹",
-        "avatar": "",
-        "kind": "text",
-        "media": "",
-        "hidden": false,
-        "unlock": "",
-        "password": "",
-        "folder": "",
-        "favorite": false,
-        "outgoing": false,
-        "read": false,
+        "read": true,
         "likes": 0,
         "comments": []
       },
       {
         "id": "suxinhao-phone-card",
         "title": "苏新皓",
-        "body": "",
+        "body": "苏新皓",
         "richText": "",
         "meta": {
           "phone": "177****4913"
@@ -1585,14 +1507,37 @@
         "folder": "",
         "favorite": false,
         "outgoing": false,
-        "read": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "zhangzeyu-phone-card",
+        "title": "张泽禹",
+        "body": "张泽禹",
+        "richText": "",
+        "meta": {
+          "phone": "159****8246"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "张泽禹",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
         "likes": 0,
         "comments": []
       },
       {
         "id": "mom-phone-card",
         "title": "妈",
-        "body": "",
+        "body": "妈",
         "richText": "",
         "meta": {
           "phone": "135****7608"
@@ -1608,7 +1553,28 @@
         "folder": "",
         "favorite": false,
         "outgoing": false,
-        "read": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "assistant-phone-card",
+        "title": "助理",
+        "body": "助理",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-19 01:35",
+        "sender": "助理",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
         "likes": 0,
         "comments": []
       }
@@ -1996,7 +1962,8 @@
         "hidden": false,
         "unlock": "",
         "password": "",
-        "folder": "",        "favorite": false,
+        "folder": "",
+        "favorite": false,
         "outgoing": false,
         "read": false,
         "likes": 0,
@@ -2995,7 +2962,8 @@
         "outgoing": false,
         "read": false,
         "likes": 0,
-        "comments": []      },
+        "comments": []
+      },
       {
         "id": "netease-pdf-22",
         "title": "GBP",
@@ -3708,6 +3676,144 @@
         "meta": {},
         "time": "2026-11-17 17:36",
         "sender": "微信支付",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      }
+    ],
+    "contacts": [
+      {
+        "id": "zhangji-contact",
+        "title": "张极",
+        "body": "张极",
+        "richText": "",
+        "meta": {
+          "phone": "138****5621"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "张极",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "zuohang-contact",
+        "title": "左航",
+        "body": "左航",
+        "richText": "",
+        "meta": {
+          "phone": "186****3074"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "左航",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "suxinhao-contact",
+        "title": "苏新皓",
+        "body": "苏新皓",
+        "richText": "",
+        "meta": {
+          "phone": "177****4913"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "苏新皓",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "zhangzeyu-contact",
+        "title": "张泽禹",
+        "body": "张泽禹",
+        "richText": "",
+        "meta": {
+          "phone": "159****8246"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "张泽禹",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "mom-contact",
+        "title": "妈",
+        "body": "妈",
+        "richText": "",
+        "meta": {
+          "phone": "135****7608"
+        },
+        "time": "2026-11-19 01:35",
+        "sender": "妈",
+        "avatar": "",
+        "kind": "text",
+        "media": "",
+        "hidden": false,
+        "unlock": "",
+        "password": "",
+        "folder": "",
+        "favorite": false,
+        "outgoing": false,
+        "read": true,
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "id": "assistant-contact",
+        "title": "助理",
+        "body": "助理",
+        "richText": "",
+        "meta": {},
+        "time": "2026-11-19 01:35",
+        "sender": "助理",
         "avatar": "",
         "kind": "text",
         "media": "",
