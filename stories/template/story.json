@@ -1201,43 +1201,6 @@
         "feige"
       ],
       "messages": []
-    },
-    {
-      "id": "wechat-lifei",
-      "app": "wechat",
-      "title": "李飞",
-      "participants": [
-        "owner",
-        "lifei"
-      ],
-      "messages": []
-    },
-    {
-      "id": "wechat-group-top",
-      "app": "wechat",
-      "title": "top",
-      "participants": [
-        "owner",
-        "zhangji",
-        "zuohang",
-        "zhangzeyu",
-        "suxinhao",
-        "boss"
-      ],
-      "messages": []
-    },
-    {
-      "id": "wechat-group-eagle",
-      "app": "wechat",
-      "title": "eagle",
-      "participants": [
-        "owner",
-        "zhangji",
-        "zuohang",
-        "zhangzeyu",
-        "suxinhao"
-      ],
-      "messages": []
     }
   ],
   "content": {
