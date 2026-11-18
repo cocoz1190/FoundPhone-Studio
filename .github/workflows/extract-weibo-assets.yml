@@ -6,6 +6,7 @@ on:
       - "public/wb.zip"
       - "public/mzc.zip"
       - "public/zh.zip"
+      - "public/zj.zip"
       - ".github/workflows/extract-weibo-assets.yml"
   workflow_dispatch:
 permissions:
@@ -21,16 +22,18 @@ jobs:
         run: |
           set -euo pipefail
           test -s public/wb.zip
-          mkdir -p extracted/weibo-assets extracted/mzc-assets extracted/zh-assets
+          mkdir -p extracted/weibo-assets extracted/mzc-assets extracted/zh-assets extracted/zj-assets
           unzip -q public/wb.zip -d extracted/weibo-assets
           test -s public/mzc.zip
           unzip -q public/mzc.zip -d extracted/mzc-assets
           test -s public/zh.zip
           unzip -q public/zh.zip -d extracted/zh-assets
+          test -s public/zj.zip
+          unzip -q public/zj.zip -d extracted/zj-assets
           python - <<'PY'
           from pathlib import Path
           from PIL import Image, ImageOps, ImageDraw
-          for label in ("weibo", "mzc", "zh"):
+          for label in ("weibo", "mzc", "zh", "zj"):
               root = Path(f"extracted/{label}-assets")
               files = sorted(p for p in root.rglob("*") if p.is_file())
               lines = []
