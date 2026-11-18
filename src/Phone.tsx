@@ -384,8 +384,6 @@ function PhoneRuntime({
             }
           }}
         >
-          <div className="wallpaper-orb orb-one" />
-          <div className="wallpaper-orb orb-two" />
           <div className="status-bar">
             <button
               onClick={() =>
