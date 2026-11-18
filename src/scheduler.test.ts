@@ -67,7 +67,7 @@ describe("deterministic scheduled story execution", () => {
     expect(result.notifications).toEqual(["到了"]);
     expect(result.scheduled).toEqual([]);
   });
-  it("reacts to variable changes and clock-minute events without arbitrary code", () => {
+  it("reacts to variable changes while keeping the configured phone clock fixed", () => {
     const w = createWork();
     w.nodes = [
       node({
@@ -81,18 +81,13 @@ describe("deterministic scheduled story execution", () => {
         target: "found",
         actions: [{ type: "clue", key: "variable", value: true }],
       }),
-      node({
-        id: "clock",
-        event: "time",
-        target: "09:42",
-        actions: [{ type: "clue", key: "clock", value: true }],
-      }),
     ];
     const s = dispatch(w, initialRuntime(w), "start");
     expect(s.clues).toEqual(["variable"]);
     const done = advance(w, s, 60000);
-    expect(done.time).toBe("09:42");
-    expect(done.clues).toEqual(["variable", "clock"]);
+    expect(done.time).toBe(w.phone.time);
+    expect(done.elapsedMs).toBe(60000);
+    expect(done.clues).toEqual(["variable"]);
   });
   it("records incoming calls and runs author answer/end branches separately", () => {
     const w = createWork();
@@ -168,5 +163,5 @@ it("keeps time action and delay order identical across tick sizes", () => {
   let split = start;
   for (let i = 0; i < 150; i++) split = advance(w, split, 1000);
   expect(bulk).toEqual(split);
-  expect(bulk.time).toBe("15:01");
+  expect(bulk.time).toBe("12:00");
 });
