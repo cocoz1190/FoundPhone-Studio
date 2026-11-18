@@ -181,10 +181,9 @@ export function compileStory(raw: unknown): { story: Story; work: Work } {
     unique(chat.id, `chats.${n}.id`);
     if (!registry.some((a) => a.id === chat.app && a.engine === "messaging"))
       fail(`chats.${n}.app`, "需要聊天 App");
-    chat.participants.forEach((c, j) => {
-      if (!contacts.has(c) && c !== "owner")
-        fail(`chats.${n}.participants.${j}`, "联系人不存在: " + c);
-    });
+    // WeChat conversations may include people who are not in the phone address book.
+    // Keep chat participants independent from the six visible phone contacts.
+
     chat.messages.forEach((m, j) => {
       if (
         m.senderId &&
@@ -201,7 +200,7 @@ export function compileStory(raw: unknown): { story: Story; work: Work } {
           sender:
             senderId === "owner"
               ? s.phone.owner
-              : contacts.get(senderId || "")?.name || m.sender || s.phone.owner,
+              : contacts.get(senderId || "")?.name || m.sender || chat.title,
           avatar: m.avatar || contacts.get(senderId || "")?.avatar || "",
           outgoing: senderId === "owner" || m.outgoing,
           meta: {
