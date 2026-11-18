@@ -8,6 +8,32 @@
     />
     <meta name="theme-color" content="#f5f4f0" />
     <title>捡手机</title>
+    <script>
+      // Remove legacy Workbox service workers so this preview always loads
+      // the deployed files. User-created works live in IndexedDB and are untouched.
+      void (async () => {
+        if (!("serviceWorker" in navigator)) return;
+        try {
+          const registrations = await navigator.serviceWorker.getRegistrations();
+          const cacheKeys = await caches.keys();
+          const legacyCaches = cacheKeys.filter((key) => key.startsWith("workbox-"));
+          const hadLegacyCache = registrations.length > 0 || legacyCaches.length > 0;
+
+          await Promise.all([
+            ...registrations.map((registration) => registration.unregister()),
+            ...legacyCaches.map((key) => caches.delete(key)),
+          ]);
+
+          const marker = "foundphone-legacy-sw-cleaned-v1";
+          if (hadLegacyCache && sessionStorage.getItem(marker) !== "1") {
+            sessionStorage.setItem(marker, "1");
+            location.reload();
+          }
+        } catch (error) {
+          console.warn("Unable to clear legacy preview cache:", error);
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
