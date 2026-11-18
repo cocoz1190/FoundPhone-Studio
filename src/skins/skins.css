@@ -4143,7 +4143,7 @@
   border-bottom: 0; color: #111; background: #fff;
 }
 .contacts-reference-row > span:last-child {
-  align-self: stretch; justify-content: center;
+  align-self: stretch; justify-content: center; text-align: left;
   border-bottom: 1px solid #e6e6e6;
 }
 .contacts-reference-row .catalog-avatar {
@@ -4151,7 +4151,7 @@
   background: linear-gradient(145deg,#b9cbe9,#7189bd);
   font-size: 23px; font-weight: 600; flex: 0 0 56px;
 }
-.contacts-reference-row > span:last-child { display:flex; flex-direction:column; gap:6px; min-width:0; }
+.contacts-reference-row > span:last-child { display:flex; flex-direction:column; align-items:flex-start; justify-content:center; gap:6px; min-width:0; text-align:left; }
 .contacts-reference-row strong { font-size: 16px; font-weight: 600; }
 .contacts-reference-row small { color:#999; font-size:13px; }
 .contacts-alpha {
@@ -4168,6 +4168,6 @@
   width:54px; height:54px; border-radius:50%;
   background:linear-gradient(145deg,#b9cbe9,#7189bd); font-size:22px;
 }
-.phone-contact-row span:last-child { display:flex; flex-direction:column; gap:5px; }
+.phone-contact-row span:last-child { display:flex; flex-direction:column; align-items:flex-start; gap:5px; text-align:left; }
 .phone-contact-row strong { font-size:15px; font-weight:600; }
 .phone-contact-row small { color:#999; font-size:12px; }
