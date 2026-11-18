@@ -158,6 +158,10 @@ function Compose({
   );
 }
 export function WeChatSkin(p: SkinProps) {
+  const wechatAccount = String(p.ui?.wechatAccount ?? "22x1119_");
+  const wechatAvatar = String(
+    p.ui?.wechatAvatar ?? "/FoundPhone-Studio/wechat-assets/zhuzhixin-avatar.jpg",
+  );
   const [tab, setTab] = useState("微信"),
     [query, setQuery] = useState(""),
     [moments, setMoments] = useState(false),
@@ -425,10 +429,10 @@ export function WeChatSkin(p: SkinProps) {
           ) : (
             <>
               <div className="wx-profile">
-                <Avatar name={p.owner || "机主"} />
+                <Avatar name={p.owner || "机主"} src={wechatAvatar} />
                 <div>
                   <h2>{p.owner || "机主"}</h2>
-                  <small>微信号：未设置</small>
+                  <small>微信号：{wechatAccount}</small>
                   <button
                     className="wx-profile-status"
                     onClick={() => setUtility("状态")}
