@@ -42,6 +42,13 @@ import {
   useContent,
   type Props,
 } from "./shared";
+const phonebookNames = ["张泽禹", "张极", "助理", "妈", "左航", "苏新皓"] as const;
+function onlyPhonebookContacts(items: Item[]) {
+  const order = new Map(phonebookNames.map((name, index) => [name, index]));
+  return items
+    .filter((item) => order.has(item.title))
+    .sort((a, b) => order.get(a.title)! - order.get(b.title)!);
+}
 export function PhoneSkin(p: Props) {
   const { tab, setTab, q, setQ, items } = useContent(p, "最近通话");
   const [digits, setDigits] = useState(""),
@@ -50,7 +57,7 @@ export function PhoneSkin(p: Props) {
     tab === "收藏"
       ? items.filter((i) => i.favorite)
       : tab === "通讯录"
-        ? items.filter((i) => i.kind !== "call")
+        ? onlyPhonebookContacts(items.filter((i) => i.kind !== "call"))
         : tab === "最近通话"
           ? items.filter((i) => i.kind === "call")
           : items;
@@ -170,7 +177,7 @@ export function PhoneSkin(p: Props) {
 export function ContactsSkin(p: Props) {
   const { q, setQ, items } = useContent(p, "所有联系人");
   const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ#".split("");
-  const list = items.filter((i) => i.title !== (p.owner ?? ""));
+  const list = onlyPhonebookContacts(items);
   return (
     <div className="catalog-skin native-contacts">
       <Header p={p} />
