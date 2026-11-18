@@ -46,9 +46,13 @@ const phonebookNames = ["张泽禹", "张极", "助理", "妈", "左航", "苏�
 function onlyPhonebookContacts(items: Item[]) {
   const order = (name: string) =>
     phonebookNames.indexOf(name as (typeof phonebookNames)[number]);
-  return items
-    .filter((item) => order(item.title) >= 0)
-    .sort((a, b) => order(a.title) - order(b.title));
+  const unique = new Map<string, Item>();
+  for (const item of items) {
+    if (order(item.title) < 0 || item.kind === "call") continue;
+    // Keep one row per saved contact even when the source contains duplicate entries.
+    if (!unique.has(item.title)) unique.set(item.title, item);
+  }
+  return [...unique.values()].sort((a, b) => order(a.title) - order(b.title));
 }
 export function PhoneSkin(p: Props) {
   const { tab, setTab, q, setQ, items } = useContent(p, "最近通话");
@@ -121,7 +125,6 @@ export function PhoneSkin(p: Props) {
                     <Avatar name={i.title} />
                     <span>
                       <strong>{i.title}</strong>
-                      {meta(i, "phone") && <small>{meta(i, "phone")}</small>}
                     </span>
                   </button>
                 ))}
@@ -190,7 +193,7 @@ export function ContactsSkin(p: Props) {
             {list.map((i) => (
               <button className="contacts-reference-row" key={i.id} onClick={() => p.onItem(i)}>
                 <Avatar name={i.title} />
-                <span><strong>{i.title}</strong><small>{meta(i, "phone", i.title)}</small></span>
+                <span><strong>{i.title}</strong></span>
               </button>
             ))}
             <Empty items={list} />
